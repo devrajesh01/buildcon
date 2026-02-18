@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* ===============================
+   1. DESIGN TOKENS (Centralized)
+================================= */
+:root {
+    /* Brand Colors */
+    --clr-gold: #9E801B;
+    --clr-dark: #282828;
+    --clr-white: #FFFFFF;
+    --clr-light: #f8f9fa;
+    --clr-text: #333333;
+    --clr-overlay: rgba(0, 0, 0, 0.6);
+
+    /* Typography */
+    --ff-heading: 'Playfair Display', serif;
+    --ff-body: 'Montserrat', sans-serif;
+
+    /* Pixel Based Font Sizes */
+    --fs-h1: 56px;
+    --fs-h2: 36px;
+    --fs-h3: 28px;
+    --fs-body: 16px;
+    --fs-small: 14px;
+    --fs-btn: 16px;
+    --fs-nav: 14px;
+
+    /* Spacing & Layout */
+    --space-unit: 16px;
+    --header-padding: 20px;
+    --header-padding-scrolled: 10px;
+    --section-padding: 80px;
+    --radius: 2px;
+
+    /* Effects */
+    --shadow-main: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --transition-base: all 0.4s ease;
+}
+
+/* ===============================
+   2. GLOBAL RESET
+================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--ff-body);
+    color: var(--clr-text);
+    background-color: var(--clr-light);
+    line-height: 1.6;
+    font-size: var(--fs-body);
+}
+
+/* ===============================
+   3. TYPOGRAPHY
+================================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-heading);
+    color: var(--clr-dark);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+p {
+    font-size: var(--fs-body);
+    margin-bottom: var(--space-unit);
+}
+
+/* ===============================
+   4. UI COMPONENTS
+================================= */
+.btn-secondary {
+    background-color: var(--clr-gold);
+    color: var(--clr-white);
+    padding: 15px 40px;
+    font-size: var(--fs-btn);
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius);
+    text-transform: uppercase;
+    transition: var(--transition-base);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-dark);
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background-color: var(--clr-gold);
+    border-color: var(--clr-gold);
+    color: var(--clr-white);
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: var(--transition-base);
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-dark);
+    border-color: var(--clr-white);
+}

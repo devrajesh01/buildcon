@@ -1,0 +1,12 @@
+/* =================================
+   MAIN ENTRY POINT (Bundler)
+================================= */
+
+/* 1. Global Setup (Variables, Reset, Typography) */
+@import url('global.css');
+
+/* 2. Component Styles */
+@import url('header.css');
+
+/* 3. Page Specific Styles */
+@import url('home.css');
