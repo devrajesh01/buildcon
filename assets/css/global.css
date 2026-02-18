@@ -6,10 +6,9 @@
 :root {
     /* Brand Colors */
     --clr-gold: #9E801B;
-    --clr-dark: #282828;
+    --clr-dark: #000;
     --clr-white: #FFFFFF;
-    --clr-light: #f8f9fa;
-    --clr-text: #333333;
+    --clr-light: #ffffff63;
     --clr-overlay: rgba(0, 0, 0, 0.6);
 
     /* Typography */
