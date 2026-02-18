@@ -3,10 +3,10 @@
 ================================= */
 
 /* 1. Global Setup (Variables, Reset, Typography) */
-@import url('global.css');
+@import url('/assets/css/global.css');
 
 /* 2. Component Styles */
-@import url('header.css');
+@import url('/assets/css/header.css');
 
 /* 3. Page Specific Styles */
-@import url('home.css');
+@import url('/assets//css/home.css');
