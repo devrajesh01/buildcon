@@ -19,6 +19,9 @@
     --fs-h1: 56px;
     --fs-h2: 36px;
     --fs-h3: 28px;
+    --fs-h4: 24px;
+    --fs-h5: 20px;
+    --fs-h6: 18px;
     --fs-body: 16px;
     --fs-small: 14px;
     --fs-btn: 16px;
@@ -128,4 +131,53 @@ p {
     background-color: var(--clr-white);
     color: var(--clr-dark);
     border-color: var(--clr-white);
+}
+
+/* ===============================
+   5. GLOBAL BUTTON (Dark Theme)
+================================= */
+.global-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    font-family: var(--ff-body);
+    font-size: var(--fs-btn);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    color: var(--clr-dark);
+    background-color: var(--clr-white);
+    border: 2px solid var(--clr-white);
+    border-radius: var(--radius);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-base);
+    z-index: 1;
+}
+
+/* Hover fill animation */
+.global-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-dark);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+    z-index: -1;
+}
+
+.global-btn:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.global-btn:hover {
+    color: var(--clr-white);
+    border-color: var(--clr-white);
+    background-color: transparent;
 }
