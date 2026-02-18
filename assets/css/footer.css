@@ -7,7 +7,7 @@
 .copyright {
     width: 100%;
     padding: 20px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--clr-white-10);
     margin-top: 20px;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .ftr_nav li a {
-    color: rgba(255, 255, 255, 0.75);
+    color: var(--clr-white-75);
     text-decoration: none;
     font-size: var(--fs-body);
     transition: all 0.3s ease;
@@ -73,12 +73,12 @@
 
 .copyright-text {
     text-align: center;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--clr-white-60);
     font-size: var(--fs-small);
 }
 
 .copyright-text a {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--clr-white-60);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -88,7 +88,7 @@
 }
 
 .ftr_col p {
-    color: rgba(255, 255, 255, 0.75);
+    color: var(--clr-white-75);
     font-size: var(--fs-body);
     margin-bottom: 4px;
     line-height: 1.8;
@@ -105,7 +105,7 @@
 }
 
 .middle-one .ftr_title {
-    margin-left: 50px;
+    margin-left: 40px;
 }
 
 .socimedia {
@@ -120,7 +120,7 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--clr-white-30);
     color: var(--clr-white);
     font-size: 16px;
     text-decoration: none;
@@ -153,7 +153,7 @@
 }
 
 .ftr_col p a {
-    color: rgba(255, 255, 255, 0.75);
+    color: var(--clr-white-75);
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;

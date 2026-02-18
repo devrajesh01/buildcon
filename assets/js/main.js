@@ -42,4 +42,28 @@ $(document).ready(function () {
             closeMobileNav();
         }
     });
+
+    // Initialize Pillars Swiper
+    const pillarsSwiper = new Swiper('.pillars-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        loop: true,
+        centeredSlides: true,
+        speed: 1000,
+        grabCursor: true,
+        loopedSlides: 6, // Mandatory for auto-width seamless loop with 6 items
+        navigation: {
+            nextEl: '.pillars-next',
+            prevEl: '.pillars-prev',
+        },
+        pagination: {
+            el: '.pillars-pagination',
+            type: 'fraction',
+        },
+        breakpoints: {
+            1024: {
+                spaceBetween: 40
+            }
+        }
+    });
 });

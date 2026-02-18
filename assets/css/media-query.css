@@ -44,6 +44,15 @@
     .ftr_col p a:hover {
         padding-left: 0;
     }
+
+    .about-section {
+        padding: 70px 0;
+    }
+
+    .about-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -68,6 +77,20 @@
 
     .ftr-logo img {
         max-width: 160px;
+    }
+
+    .about-section {
+        padding: 50px 0;
+    }
+
+    .about-content {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .about-quote {
+        border-left: none;
+        border-top: 3px solid var(--clr-gold);
     }
 }
 
@@ -103,5 +126,49 @@
 
     .copyright-text {
         font-size: 12px;
+    }
+
+    .pillars-slider-wrap {
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 0;
+    }
+
+    .pillar-card {
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(3px);
+    }
+
+    .swiper-slide {
+        width: 140px;
+        /* Narrower on mobile to show more around center */
+        opacity: 0.4;
+    }
+
+    .swiper-slide-active {
+        width: 320px;
+        /* Centered card focus */
+        opacity: 1;
+    }
+
+    .pillar-card {
+        height: 520px;
+        padding: 30px 15px;
+    }
+
+    .pillar-title {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .swiper-slide-active .pillar-image {
+        height: 160px;
+    }
+
+    .pillars-nav {
+        justify-content: center;
+        padding-top: 20px;
+        gap: 20px;
     }
 }

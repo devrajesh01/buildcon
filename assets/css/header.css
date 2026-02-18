@@ -6,19 +6,19 @@
     z-index: 1000;
     padding: var(--header-padding) 0;
     transition: var(--transition-base);
-    background: rgba(0, 0, 0, 0.15);
+    background: var(--clr-glass-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--clr-white-08);
 }
 
 .main-header.scrolled {
-    background: rgba(0, 0, 0, 0.15);
+    background: var(--clr-glass-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: var(--header-padding-scrolled) 0;
     box-shadow: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--clr-white-08);
 }
 
 .logo img {
@@ -96,7 +96,6 @@
     color: var(--clr-dark);
 }
 
-/* Hamburger Button */
 .hamburger {
     display: none;
     background: none;
@@ -112,14 +111,13 @@
     color: var(--clr-gold);
 }
 
-/* Mobile Nav Overlay */
 .mobile-nav-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: var(--clr-overlay);
     z-index: 1999;
     opacity: 0;
     visibility: hidden;
@@ -131,7 +129,6 @@
     visibility: visible;
 }
 
-/* Mobile Nav Drawer */
 .mobile-nav {
     position: fixed;
     top: 0;
@@ -157,7 +154,7 @@
     align-items: center;
     margin-bottom: 40px;
     padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--clr-white-10);
 }
 
 .mobile-nav-header .logo img {
@@ -167,7 +164,7 @@
 
 .mobile-nav-close {
     background: none;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--clr-white-20);
     color: var(--clr-white);
     font-size: 20px;
     cursor: pointer;
@@ -191,7 +188,7 @@
 }
 
 .mobile-nav-links li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid var(--clr-white-06);
 }
 
 .mobile-nav-links li a {
@@ -227,7 +224,7 @@
     gap: 10px;
     margin-top: auto;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--clr-white-10);
 }
 
 .mobile-nav-social a {
@@ -236,7 +233,7 @@
     justify-content: center;
     width: 38px;
     height: 38px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--clr-white-30);
     color: var(--clr-white);
     font-size: 14px;
     text-decoration: none;

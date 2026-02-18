@@ -11,6 +11,16 @@
     --clr-light: #ffffff63;
     --clr-overlay: rgba(0, 0, 0, 0.6);
 
+    /* Transparent Variants */
+    --clr-glass-bg: rgba(0, 0, 0, 0.15);
+    --clr-white-75: rgba(255, 255, 255, 0.75);
+    --clr-white-60: rgba(255, 255, 255, 0.6);
+    --clr-white-30: rgba(255, 255, 255, 0.3);
+    --clr-white-20: rgba(255, 255, 255, 0.2);
+    --clr-white-10: rgba(255, 255, 255, 0.1);
+    --clr-white-08: rgba(255, 255, 255, 0.08);
+    --clr-white-06: rgba(255, 255, 255, 0.06);
+
     /* Typography */
     --ff-heading: 'Playfair Display', serif;
     --ff-body: 'Montserrat', sans-serif;
@@ -90,6 +100,30 @@ h3 {
 p {
     font-size: var(--fs-body);
     margin-bottom: var(--space-unit);
+    line-height: 1.8;
+}
+
+/* Section Title (Reusable) */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-label {
+    color: var(--clr-gold);
+    font-family: var(--ff-body);
+    font-size: var(--fs-small);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.section-heading {
+    color: var(--clr-white);
+    font-size: var(--fs-h3);
+    line-height: 1.3;
+    margin-bottom: 0;
 }
 
 /* ===============================
