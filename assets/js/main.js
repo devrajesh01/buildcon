@@ -45,13 +45,16 @@ $(document).ready(function () {
 
     // Initialize Pillars Swiper
     const pillarsSwiper = new Swiper('.pillars-swiper', {
-        slidesPerView: 'auto',
+        slidesPerView: 1.2, // Mobile default: 1 full + peeking
         spaceBetween: 10,
         loop: true,
         centeredSlides: true,
+        slidesPerGroup: 1, // Always move 1 by 1
         speed: 1000,
         grabCursor: true,
-        loopedSlides: 6, // Mandatory for auto-width seamless loop with 6 items
+        loopedSlides: 6, // Match total slides (6) for perfectly symmetric loop cloning
+        loopAdditionalSlides: 2,
+        watchSlidesProgress: true,
         navigation: {
             nextEl: '.pillars-next',
             prevEl: '.pillars-prev',
@@ -62,6 +65,7 @@ $(document).ready(function () {
         },
         breakpoints: {
             1024: {
+                slidesPerView: 3.8, // Desktop: 3 full + 2 peeking (~40% each)
                 spaceBetween: 40
             }
         }

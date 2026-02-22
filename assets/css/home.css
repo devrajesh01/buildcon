@@ -101,16 +101,19 @@
 }
 
 .swiper-slide {
-    width: 450px;
-    /* Inactive width for ideal peek balance */
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    height: auto;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    /* Space for the scaled active card */
 }
 
 .swiper-slide-active {
-    width: 600px;
-    /* Prominent Hero center */
     opacity: 1;
+    z-index: 10;
 }
 
 .pillar-card {
@@ -118,7 +121,8 @@
 }
 
 .pillar-card {
-    height: 650px;
+    height: 550px;
+    /* Reduced for elegant Four Seasons look */
     padding: 40px 30px;
     display: flex;
     flex-direction: column;
@@ -189,6 +193,17 @@
     background-color: var(--clr-white);
     border-color: var(--clr-white);
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+    transform: scale(1.2);
+    /* Increased for premium contrast */
+    z-index: 20;
+}
+
+.pillar-card {
+    width: 100%;
+    /* Ensure card fills the slide container */
+    max-width: 450px;
+    /* Optional: cap the card width within the slide */
+    margin: 0 auto;
 }
 
 .swiper-slide-active .pillar-title {
@@ -197,7 +212,8 @@
 }
 
 .swiper-slide-active .pillar-image {
-    height: 280px;
+    height: 240px;
+    /* Reduced for shorter card */
     opacity: 1;
     margin: 20px 0;
 }
