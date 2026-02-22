@@ -78,6 +78,8 @@
     z-index: 83;
 }
 
+
+
 /* Pillars Section */
 .pillars-section {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
@@ -102,20 +104,16 @@
 
 .swiper-slide {
     height: auto;
-    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0.5;
-    /* Forced to 1 during symmetry fix to verify slide presence */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 60px 0;
 }
 
-@media (min-width: 1024px) {
-    .swiper-slide {
-        width: 450px;
-        /* Fixed width for bulletproof centering and peeking */
-    }
+.swiper-wrapper {
+    align-items: center;
 }
 
 .swiper-slide-active {
@@ -198,7 +196,9 @@
     background-color: var(--clr-white);
     border-color: var(--clr-white);
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
-    transform: scale(1.15);
+    /* transform: scale(1.15); */
+    transform: scale(1.08);
+
     /* Reduced slightly to keep gaps visually even */
     z-index: 20;
 }
@@ -222,6 +222,10 @@
     visibility: visible;
     transform: translateY(0);
     max-height: 250px;
+}
+
+.swiper-wrapper {
+    align-items: center;
 }
 
 /* Action Button */

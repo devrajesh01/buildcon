@@ -45,29 +45,29 @@ $(document).ready(function () {
 
     // Initialize Pillars Swiper
     const pillarsSwiper = new Swiper('.pillars-swiper', {
-        slidesPerView: 1.2,
-        spaceBetween: 10,
         loop: true,
         centeredSlides: true,
-        slidesPerGroup: 1,
-        speed: 1000,
+        speed: 900,
         grabCursor: true,
-        loopedSlides: 12, // Massive buffer for perfect symmetry
-        loopAdditionalSlides: 4,
-        watchSlidesProgress: true,
+        spaceBetween: 20,
+
+        slidesPerView: 1.2, // mobile
+
         navigation: {
             nextEl: '.pillars-next',
             prevEl: '.pillars-prev',
         },
+
         pagination: {
             el: '.pillars-pagination',
             type: 'fraction',
         },
+
         breakpoints: {
             1024: {
-                slidesPerView: 'auto', // CSS will control the width (450px)
-                spaceBetween: 50,
-                centeredSlides: true
+                slidesPerView: 4.6, // 🔥 3 full + 80% each side
+                centeredSlides: true,
+                spaceBetween: 40,
             }
         }
     });
