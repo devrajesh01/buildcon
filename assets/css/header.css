@@ -22,15 +22,22 @@
 }
 
 .logo img {
-    height: 50px;
+    height: 70px;
     transition: var(--transition-base);
-    filter: brightness(0) invert(1);
 }
 
 .main-header.scrolled .logo img {
-    height: 40px;
-    filter: brightness(0) invert(1);
+    height: 70px;
 }
+
+/* .logo img {
+    height: 50px;
+    transition: var(--transition-base);
+}
+
+.main-header.scrolled .logo img {
+    height: 60px;
+} */
 
 .nav-menu ul li {
     margin: 0 18px;
@@ -89,6 +96,7 @@
     border-color: var(--clr-gold);
     color: var(--clr-white);
     background-color: var(--clr-gold);
+    letter-spacing: 1.3px;
 }
 
 .main-header.scrolled .btn-primary:hover {
@@ -159,7 +167,6 @@
 
 .mobile-nav-header .logo img {
     height: 36px;
-    filter: brightness(0) invert(1);
 }
 
 .mobile-nav-close {

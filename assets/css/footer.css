@@ -34,8 +34,12 @@
 }
 
 .middle-one .ftr_title::after {
-    left: 50%;
+    left: 22%;
     transform: translateX(-50%);
+}
+
+.middle-one .ftr_title {
+    margin-left: 16px;
 }
 
 .ftr_nav {
@@ -105,9 +109,11 @@
     align-items: center;
 }
 
-.middle-one .ftr_title {
-    margin-left: 40px;
+.ftr_nav li a {
+    font-size: 12px;
 }
+
+
 
 .socimedia {
     display: flex;

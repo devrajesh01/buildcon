@@ -1,0 +1,134 @@
+/* Video Testimonials Slider Styling */
+
+.video-section {
+    padding: 80px 0;
+    background-color: #0f0f0f;
+    position: relative;
+    overflow: visible;
+    /* Crucial for outside arrows */
+}
+
+/* The wrap acts as the positioning context for arrows */
+.video-swiper-wrap {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.video-swiper {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.video-card {
+    background: #000;
+    width: 100%;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+    width: 100%;
+    background: #111;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+}
+
+/* Navigation - Positioned Outside the Container */
+.video-nav {
+    position: static;
+}
+
+.video-prev,
+.video-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 100;
+}
+
+/* Pulling arrows outside the container */
+.video-prev {
+    left: -70px;
+}
+
+.video-next {
+    right: -70px;
+}
+
+.video-prev:hover,
+.video-next:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1400px) {
+
+    /* Bring arrows slightly closer on smaller screens if they might go off-screen */
+    .video-prev {
+        left: -60px;
+    }
+
+    .video-next {
+        right: -60px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    /* Place arrows on the edges for smaller laptops */
+    .video-prev {
+        left: -30px;
+    }
+
+    .video-next {
+        right: -30px;
+    }
+
+    /* Or if screen is too narrow, place them over the video with lower opacity */
+    .video-swiper-wrap {
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-prev {
+        left: 10px;
+        opacity: 0.7;
+    }
+
+    .video-next {
+        right: 10px;
+        opacity: 0.7;
+    }
+
+    .video-prev,
+    .video-next {
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+}

@@ -71,4 +71,17 @@ $(document).ready(function () {
             }
         }
     });
+
+    // Initialize Video Swiper
+    console.log('Initializing Video Swiper...');
+    const videoSwiper = new Swiper('.video-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        speed: 800,
+        navigation: {
+            nextEl: '.video-next',
+            prevEl: '.video-prev',
+        },
+    });
 });
