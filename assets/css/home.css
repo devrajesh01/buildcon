@@ -104,11 +104,18 @@
     height: auto;
     transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0.5;
+    /* Forced to 1 during symmetry fix to verify slide presence */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 60px 0;
-    /* Space for the scaled active card */
+}
+
+@media (min-width: 1024px) {
+    .swiper-slide {
+        width: 450px;
+        /* Fixed width for bulletproof centering and peeking */
+    }
 }
 
 .swiper-slide-active {
@@ -117,25 +124,23 @@
 }
 
 .pillar-card {
-    opacity: 1;
-}
-
-.pillar-card {
-    height: 480px;
-    /* Further reduced from 550px to match buildcon-sable sleek look */
-    padding: 30px 25px;
+    height: 550px;
+    /* Premium profile height */
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     background-color: rgba(0, 0, 0, 0.4);
-    /* Transparent inactive background */
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    /* Crisp white border */
+    border: 1px solid rgba(255, 255, 255, 1);
     backdrop-filter: blur(5px);
     position: relative;
     cursor: pointer;
+    z-index: 5;
 }
 
 /* Inactive State (Default) */
@@ -193,29 +198,23 @@
     background-color: var(--clr-white);
     border-color: var(--clr-white);
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
-    transform: scale(1.2);
-    /* Increased for premium contrast */
+    transform: scale(1.15);
+    /* Reduced slightly to keep gaps visually even */
     z-index: 20;
 }
 
-.pillar-card {
-    width: 100%;
-    /* Ensure card fills the slide container */
-    max-width: 450px;
-    /* Optional: cap the card width within the slide */
-    margin: 0 auto;
-}
+/* Active state will inherit the height but change appearance */
 
 .swiper-slide-active .pillar-title {
     color: var(--clr-dark);
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .swiper-slide-active .pillar-image {
-    height: 200px;
-    /* Adjusted for 480px card height */
+    height: 250px;
+    /* Adjusted for 550px height */
     opacity: 1;
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
 .swiper-slide-active .pillar-footer {

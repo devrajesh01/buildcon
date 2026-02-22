@@ -74,7 +74,8 @@
 .copyright-text {
     text-align: center;
     color: var(--clr-white-60);
-    font-size: var(--fs-small);
+    font-size: 12px;
+    letter-spacing: 1.6px;
 }
 
 .copyright-text a {
@@ -166,4 +167,14 @@
 
 .ftr_col p a:hover {
     color: var(--clr-gold);
+}
+
+.ftr_col p,
+.ftr_col a {
+    font-size: 12px;
+    letter-spacing: 1.6px;
+}
+
+.ftr_title {
+    font-size: 18px;
 }

@@ -3,12 +3,8 @@
 ================================= */
 
 /* 1. Global Setup (Variables, Reset, Typography) */
-@import url('/assets/css/global.css');
-
-/* 2. Component Styles */
-@import url('/assets/css/header.css');
-
-/* 3. Page Specific Styles */
-@import url('/assets//css/home.css');
-@import url('/assets//css/footer.css');
-@import url('/assets//css/media-query.css');
+@import url('global.css');
+@import url('header.css');
+@import url('home.css');
+@import url('footer.css');
+@import url('media-query.css');

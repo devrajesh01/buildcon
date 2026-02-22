@@ -45,15 +45,15 @@ $(document).ready(function () {
 
     // Initialize Pillars Swiper
     const pillarsSwiper = new Swiper('.pillars-swiper', {
-        slidesPerView: 1.2, // Mobile default: 1 full + peeking
+        slidesPerView: 1.2,
         spaceBetween: 10,
         loop: true,
         centeredSlides: true,
-        slidesPerGroup: 1, // Always move 1 by 1
+        slidesPerGroup: 1,
         speed: 1000,
         grabCursor: true,
-        loopedSlides: 6, // Match total slides
-        loopAdditionalSlides: 6, // Massive buffer to ensure right-side loop never gaps
+        loopedSlides: 12, // Massive buffer for perfect symmetry
+        loopAdditionalSlides: 4,
         watchSlidesProgress: true,
         navigation: {
             nextEl: '.pillars-next',
@@ -65,8 +65,9 @@ $(document).ready(function () {
         },
         breakpoints: {
             1024: {
-                slidesPerView: 3.8, // Desktop: 3 full + 2 peeking (~40% each)
-                spaceBetween: 40
+                slidesPerView: 'auto', // CSS will control the width (450px)
+                spaceBetween: 50,
+                centeredSlides: true
             }
         }
     });
