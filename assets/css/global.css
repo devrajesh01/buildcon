@@ -1,11 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+/* ===============================
+   0. FONTS (Local)
+================================= */
+@font-face {
+    font-family: 'Helvetica LT Pro';
+    src: url('../fonts/Helvetica LT Pro Roman.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica LT Pro';
+    src: url('../fonts/Helvetica LT Pro Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica LT Pro';
+    src: url('../fonts/Helvetica LT Pro Oblique.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica LT Pro';
+    src: url('../fonts/Helvetica LT Pro Bold Oblique.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
 
 /* ===============================
    1. DESIGN TOKENS (Centralized)
 ================================= */
 :root {
     /* Brand Colors */
-    --clr-gold: #9E801B;
+    --clr-gold: #95c12b;
     --clr-dark: #000;
     --clr-white: #FFFFFF;
     --clr-light: #ffffff63;
@@ -22,8 +55,8 @@
     --clr-white-06: rgba(255, 255, 255, 0.06);
 
     /* Typography */
-    --ff-heading: 'Playfair Display', serif;
-    --ff-body: 'Montserrat', sans-serif;
+    --ff-heading: 'Helvetica LT Pro', sans-serif;
+    --ff-body: 'Helvetica LT Pro', sans-serif;
 
     /* Pixel Based Font Sizes */
     --fs-h1: 56px;
@@ -162,7 +195,7 @@ p {
 }
 
 .btn-primary:hover {
-    background-color: var(--clr-white);
+    background-color: var(--clr-gold);
     color: var(--clr-dark);
     border-color: var(--clr-white);
 }
@@ -198,7 +231,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--clr-dark);
+    background-color: var(--clr-gold);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.4s ease;
@@ -212,6 +245,6 @@ p {
 
 .global-btn:hover {
     color: var(--clr-white);
-    border-color: var(--clr-white);
-    background-color: transparent;
+    border-color: var(--clr-gold);
+    background-color: var(--clr-gold);
 }

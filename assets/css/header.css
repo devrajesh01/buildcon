@@ -80,20 +80,20 @@
 }
 
 .main-header .btn-primary:hover {
-    background-color: var(--clr-white);
+    background-color: var(--clr-gold);
     color: var(--clr-dark);
-    border-color: var(--clr-white);
+    border-color: var(--clr-gold);
 }
 
 .main-header.scrolled .btn-primary {
-    border-color: var(--clr-white);
+    border-color: var(--clr-gold);
     color: var(--clr-white);
-    background-color: transparent;
+    background-color: var(--clr-gold);
 }
 
 .main-header.scrolled .btn-primary:hover {
-    background-color: var(--clr-white);
-    color: var(--clr-dark);
+    background-color: var(--clr-gold);
+    color: var(--clr-white);
 }
 
 .hamburger {
