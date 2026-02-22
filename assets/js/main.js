@@ -52,8 +52,8 @@ $(document).ready(function () {
         slidesPerGroup: 1, // Always move 1 by 1
         speed: 1000,
         grabCursor: true,
-        loopedSlides: 6, // Match total slides (6) for perfectly symmetric loop cloning
-        loopAdditionalSlides: 2,
+        loopedSlides: 6, // Match total slides
+        loopAdditionalSlides: 6, // Massive buffer to ensure right-side loop never gaps
         watchSlidesProgress: true,
         navigation: {
             nextEl: '.pillars-next',

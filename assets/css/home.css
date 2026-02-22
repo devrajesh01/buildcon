@@ -121,9 +121,9 @@
 }
 
 .pillar-card {
-    height: 550px;
-    /* Reduced for elegant Four Seasons look */
-    padding: 40px 30px;
+    height: 480px;
+    /* Further reduced from 550px to match buildcon-sable sleek look */
+    padding: 30px 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -212,10 +212,10 @@
 }
 
 .swiper-slide-active .pillar-image {
-    height: 240px;
-    /* Reduced for shorter card */
+    height: 200px;
+    /* Adjusted for 480px card height */
     opacity: 1;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .swiper-slide-active .pillar-footer {
