@@ -16,25 +16,44 @@
     <!-- Header -->
     <header class="main-header">
         <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo">
-                <a href="#"><img src="assets/images/IM-Buildcon-logo-logo.PNG" alt="IM Buildcon Logo"></a>
+            <div class="header-left d-flex align-items-center">
+                <button class="hamburger me-3" id="hamburgerBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="logo">
+                    <a href="#"><img src="assets/images/logo-new.png" alt="IM Buildcon Logo"></a>
+                </div>
             </div>
             <nav class="nav-menu">
                 <ul class="d-flex list-unstyled m-0">
                     <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Our Projects</a></li>
                     <li><a href="#">Our Impact</a></li>
+                    <li><a href="#">Our Projects</a></li>
                     <li><a href="#">Perspective</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="has-submenu">
+                        <a href="#">Get In Touch <i class="fa-solid fa-chevron-down ms-1"
+                                style="font-size: 10px;"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
-            <div class="header-cta">
-                <a href="#" class="btn btn-primary">Enquire</a>
+            <div class="header-actions d-flex align-items-center">
+                <a href="#" class="action-item d-flex align-items-center text-decoration-none">
+                    <i class="fa-solid fa-file-signature me-2"></i>
+                    <span>Enquire</span>
+                </a>
+                <a href="#" class="action-item d-flex align-items-center text-decoration-none ms-4">
+                    <i class="fa-brands fa-whatsapp me-2"></i>
+                    <span>Chat</span>
+                </a>
+                <a href="#" class="action-item d-flex align-items-center text-decoration-none ms-4">
+                    <i class="fa-solid fa-magnifying-glass me-2"></i>
+                    <span>Search</span>
+                </a>
             </div>
-            <button class="hamburger" id="hamburgerBtn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
         </div>
     </header>
 
@@ -43,7 +62,7 @@
     <nav class="mobile-nav" id="mobileNav">
         <div class="mobile-nav-header">
             <div class="logo">
-                <a href="#"><img src="assets/images/IM-Buildcon-logo-logo.PNG" alt="IM Buildcon Logo"></a>
+                <a href="#"><img src="assets/images/logo-new.png" alt="IM Buildcon Logo"></a>
             </div>
             <button class="mobile-nav-close" id="mobileNavClose">
                 <i class="fa-solid fa-xmark"></i>
@@ -51,14 +70,29 @@
         </div>
         <ul class="mobile-nav-links">
             <li><a href="#">Our Story</a></li>
-            <li><a href="#">Our Projects</a></li>
             <li><a href="#">Our Impact</a></li>
+            <li><a href="#">Our Projects</a></li>
             <li><a href="#">Perspective</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Get In Touch</a>
+                <ul class="mobile-submenu list-unstyled ms-3">
+                    <li><a href="#" style="font-size: 13px; opacity: 0.8;">Careers</a></li>
+                    <li><a href="#" style="font-size: 13px; opacity: 0.8;">Contact</a></li>
+                </ul>
+            </li>
         </ul>
-        <div class="mobile-nav-cta">
-            <a href="#" class="global-btn">Enquire</a>
+        <div class="mobile-nav-actions mt-4">
+            <a href="#" class="mobile-action-item d-flex align-items-center text-decoration-none mb-3">
+                <i class="fa-solid fa-file-signature me-3" style="color: var(--clr-gold);"></i>
+                <span>Enquire</span>
+            </a>
+            <a href="#" class="mobile-action-item d-flex align-items-center text-decoration-none mb-3">
+                <i class="fa-brands fa-whatsapp me-3" style="color: var(--clr-gold);"></i>
+                <span>Chat Now</span>
+            </a>
+            <a href="#" class="mobile-action-item d-flex align-items-center text-decoration-none">
+                <i class="fa-solid fa-magnifying-glass me-3" style="color: var(--clr-gold);"></i>
+                <span>Search</span>
+            </a>
         </div>
         <div class="mobile-nav-social">
             <a target="_blank" href="https://www.facebook.com/IMBuildconOfficial"><i
@@ -70,42 +104,51 @@
         </div>
     </nav>
 
-    <!-- Hero Banner -->
     <section class="hero-section">
-        <div class="hero-video">
-            <iframe
-                src="https://www.youtube.com/embed/yN7zQvAv8d8?autoplay=1&mute=1&loop=1&playlist=yN7zQvAv8d8&controls=0&rel=0&modestbranding=1&playsinline=1"
-                title="Blueprint Building Construction - 3D" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/assets/images/banner-1.png" alt="Luxury Building 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/banner-2.png" alt="Luxury Building 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/banner-3.png" alt="Luxury Building 3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/banner-4.png" alt="Luxury Building 3">
+                </div>
+            </div>
+            <!-- Navigation -->
+            <div class="hero-nav-prev"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="hero-nav-next"><i class="fa-solid fa-chevron-right"></i></div>
+            <!-- Pagination -->
+            <div class="hero-pagination"></div>
         </div>
     </section>
 
     <!-- About Section -->
     <section class="about-section">
         <div class="container">
-            <div class="section-title">
-                <h3 class="section-heading">Building With Purpose, Designing For Life</h3>
+            <div class="about-top">
+                <h3 class="section-heading">Building With Purpose</h3>
+                <p>A Mumbai-based real estate company shaped by integrity, intention, and
+                    enduring design. Since 2011, IM Buildcon has been creating residential and commercial spaces
+                    that balance thoughtful architecture with everyday comfort — homes built to last, and
+                    relationships built on trust.</p>
             </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about-content">
-                        <p>A Mumbai-based real estate company shaped by integrity, intention, and
-                            enduring design. Since 2011, IM Buildcon has been creating residential and commercial spaces
-                            that balance thoughtful architecture with everyday comfort — homes built to last, and
-                            relationships built on trust.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-quote">
 
-                        <h4 class="quote-text"> <span class="quote-mark">"</span>We Stand Where Few Stood</h4>
-                        <p>Our tagline reflects the courage to build with conviction — choosing
-                            integrity over shortcuts, purpose over pace, and long-term value over momentary gain. It is
-                            a reminder that progress is meaningful when it is principled.</p>
-                    </div>
-                </div>
+        </div>
+    </section>
+    <section class="we-stand">
+        <div class="sec-image"><img src="/assets/images/banner-image-girl.png" alt="Terrace View"></div>
+        <div class="container">
+            <div class="we-stand-content">
+                <h4 class="section-heading">We Stand Where Few Stood</h4>
+                <p>Our tagline reflects the courage to build with conviction — choosing
+                    integrity over shortcuts, purpose over pace, and long-term value over momentary gain. It is
+                    a reminder that progress is meaningful when it is principled.</p>
             </div>
         </div>
     </section>
@@ -130,9 +173,7 @@
                             </div>
                             <div class="pillar-footer">
                                 <p>Every decision is guided by transparency and ethics that stand the test of time.</p>
-                                <div class="pillar-action">
-                                    <a href="#" class="view-btn">View More</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -147,9 +188,7 @@
                             <div class="pillar-footer">
                                 <p>Our word is our bond, honoured through consistency, care, and long-term
                                     accountability.</p>
-                                <div class="pillar-action">
-                                    <a href="#" class="view-btn">View More</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -163,9 +202,7 @@
                             </div>
                             <div class="pillar-footer">
                                 <p>Design that balances beauty, function, and the quiet rhythms of living.</p>
-                                <div class="pillar-action">
-                                    <a href="#" class="view-btn">View More</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -180,9 +217,7 @@
                             <div class="pillar-footer">
                                 <p>Refinement lives in the details — subtle finishes, calm aesthetics, and timeless
                                     elegance.</p>
-                                <div class="pillar-action">
-                                    <a href="#" class="view-btn">View More</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -197,9 +232,7 @@
                             <div class="pillar-footer">
                                 <p>We listen closely, build responsibly, and design spaces that grow with the people who
                                     call them home.</p>
-                                <div class="pillar-action">
-                                    <a href="#" class="view-btn">View More</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -214,9 +247,7 @@
                             <div class="pillar-footer">
                                 <p>As we expand, our focus remains on sustainability, relevance, and creating lasting
                                     value for communities.</p>
-                                <div class="pillar-action">
-                                    <a href="#" class="view-btn">View More</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -231,9 +262,7 @@
                             </div>
                             <div class="pillar-footer">
                                 <p>Every decision is guided by transparency and ethics that stand the test of time.</p>
-                                <div class="pillar-action">
-                                    <a href="#" class="view-btn">View More</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -248,9 +277,7 @@
                             <div class="pillar-footer">
                                 <p>Our word is our bond, honoured through consistency, care, and long-term
                                     accountability.</p>
-                                <div class="pillar-action">
-                                    <a href="#" class="view-btn">View More</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -264,9 +291,7 @@
                             </div>
                             <div class="pillar-footer">
                                 <p>Design that balances beauty, function, and the quiet rhythms of living.</p>
-                                <div class="pillar-action">
-                                    <a href="#" class="view-btn">View More</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -281,9 +306,7 @@
                             <div class="pillar-footer">
                                 <p>Refinement lives in the details — subtle finishes, calm aesthetics, and timeless
                                     elegance.</p>
-                                <div class="pillar-action">
-                                    <a href="#" class="view-btn">View More</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -298,9 +321,7 @@
                             <div class="pillar-footer">
                                 <p>We listen closely, build responsibly, and design spaces that grow with the people who
                                     call them home.</p>
-                                <div class="pillar-action">
-                                    <a href="#" class="view-btn">View More</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -315,9 +336,7 @@
                             <div class="pillar-footer">
                                 <p>As we expand, our focus remains on sustainability, relevance, and creating lasting
                                     value for communities.</p>
-                                <div class="pillar-action">
-                                    <a href="#" class="view-btn">View More</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -337,7 +356,13 @@
             <div class="section-title">
                 <h3 class="section-heading">Testimonials</h3>
             </div>
-            <div class="video-swiper-wrap">
+            <div class="video-wrapper" id="testimonialVideoWrapper">
+                <video id="testimonialVideo" poster="assets/images/testimonilas-video.jpeg">
+                    <source src="assets/videos/testimonilas-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <!-- <div class="video-swiper-wrap">
                 <div class="swiper video-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -348,29 +373,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="video-card">
-                                <div class="video-container">
-                                    <iframe src="https://www.youtube.com/embed/yN7zQvAv8d8?modestbranding=1&rel=0"
-                                        frameborder="0" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="video-card">
-                                <div class="video-container">
-                                    <iframe src="https://www.youtube.com/embed/z6p8H9fX9lY?modestbranding=1&rel=0"
-                                        frameborder="0" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="video-nav">
                     <button class="video-prev"><i class="fa-solid fa-chevron-left"></i></button>
                     <button class="video-next"><i class="fa-solid fa-chevron-right"></i></button>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -380,7 +389,7 @@
             <div class="row">
                 <div class="col-md-4 ftr_col">
                     <div class="ftr-logo">
-                        <a href="#"><img src="assets/images/IM-Buildcon-logo-logo.PNG" alt="brand-logo"></a>
+                        <a href="#"><img src="assets/images/logo-new.png" alt="brand-logo"></a>
                     </div>
                     <p>IM Buildcon Pvt. Ltd. is a leading real estate developer based in Mumbai, India. We specialize in
                         residential and commercial projects that redefine urban living.

@@ -49,7 +49,7 @@ $(document).ready(function () {
         centeredSlides: true,
         speed: 900,
         grabCursor: true,
-        spaceBetween: 20,
+        spaceBetween: 10,
 
         slidesPerView: 1.2, // mobile
 
@@ -65,11 +65,33 @@ $(document).ready(function () {
 
         breakpoints: {
             1024: {
-                slidesPerView: 4.6, // 🔥 3 full + 80% each side
+                slidesPerView: 4,   // ✅ 3 full + 50% each side
                 centeredSlides: true,
                 spaceBetween: 40,
             }
         }
+    });
+
+    // Initialize Hero Swiper
+    const heroSwiper = new Swiper('.hero-swiper', {
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        loop: true,
+        speed: 1000,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.hero-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.hero-nav-next',
+            prevEl: '.hero-nav-prev',
+        },
     });
 
     // Initialize Video Swiper
@@ -84,4 +106,23 @@ $(document).ready(function () {
             prevEl: '.video-prev',
         },
     });
+
+    // Testimonial Video Logic
+    const videoWrapper = document.getElementById('testimonialVideoWrapper');
+    const video = document.getElementById('testimonialVideo');
+
+    if (videoWrapper && video) {
+        videoWrapper.addEventListener('click', function () {
+            if (video.paused) {
+                video.play();
+                video.setAttribute('controls', 'true');
+            }
+        });
+
+        // Reset if video ends
+        video.addEventListener('ended', function () {
+            video.removeAttribute('controls');
+            video.load(); // Reset to poster image
+        });
+    }
 });
