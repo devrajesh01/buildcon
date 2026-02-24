@@ -460,3 +460,7 @@
     display: block;
     object-fit: cover;
 }
+
+.maincontent {
+    padding: 0 150px;
+}
