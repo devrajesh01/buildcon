@@ -1,6 +1,6 @@
 .hero-section {
     position: relative;
-    height: 100vh;
+    height: 85vh;
     width: 100%;
     overflow: hidden;
 }
@@ -137,101 +137,147 @@
 /* we stand */
 .we-stand {
     position: relative;
-    min-height: 65vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
-    padding: 120px 0;
+    padding: 0 60px;
     overflow: hidden;
+    background-color: var(--clr-dark);
 }
 
 .we-stand .sec-image {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 60px;
+    right: 60px;
+    bottom: 0;
+    width: calc(100% - 120px);
     height: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 
 .we-stand .sec-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.9;
-    filter: brightness(0.8) contrast(1.1);
+    opacity: 0.85;
+    filter: brightness(0.75) contrast(1.1) saturate(1.05);
 }
 
-/* Add a subtle warm gradient overlay to match the golden hour aesthetic */
+/* Left-side gradient overlay for text readability */
 .we-stand::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 60px;
+    right: 60px;
     height: 100%;
     background: linear-gradient(90deg,
-            rgba(0, 0, 0, 0.4) 0%,
-            rgba(0, 0, 0, 0.2) 50%,
+            rgba(0, 0, 0, 0.73) 0%,
+            rgba(0, 0, 0, 0.577) 45%,
+            rgba(0, 0, 0, 0.05) 85%,
             transparent 100%);
     z-index: 1;
+    pointer-events: none;
 }
 
 .we-stand .container {
     position: relative;
     z-index: 2;
+    padding: 100px 0;
 }
 
 .we-stand-content {
-    max-width: 650px;
+    max-width: 480px;
     text-align: left;
 }
 
 .we-stand .section-heading {
     color: var(--clr-white);
-    font-size: 32px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 4px;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    letter-spacing: 3px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    font-family: var(--ff-heading);
 }
 
 .we-stand p {
-    color: var(--clr-white);
-    font-size: 20px;
-    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+    line-height: 1.7;
     margin-bottom: 0;
-    opacity: 0.95;
-    font-weight: 400;
+    font-weight: 300;
+    font-family: var(--ff-body);
 }
 
 @media (max-width: 991px) {
     .we-stand {
-        min-height: 60vh;
-        padding: 80px 0;
+        min-height: 45vh;
+        padding: 0 30px;
+    }
+
+    .we-stand .sec-image {
+        left: 30px;
+        right: 30px;
+        width: calc(100% - 60px);
+    }
+
+    .we-stand::before {
+        left: 30px;
+        right: 30px;
+    }
+
+    .we-stand .container {
+        padding: 70px 0;
     }
 
     .we-stand .section-heading {
-        font-size: 32px;
+        font-size: 15px;
     }
 
     .we-stand p {
-        font-size: 18px;
+        font-size: 14px;
     }
 }
 
 @media (max-width: 767px) {
     .we-stand {
-        text-align: center;
+        padding: 0 20px;
+        min-height: 40vh;
+    }
+
+    .we-stand .sec-image {
+        left: 20px;
+        right: 20px;
+        width: calc(100% - 40px);
+    }
+
+    .we-stand::before {
+        left: 20px;
+        right: 20px;
+        background: linear-gradient(180deg,
+                rgba(0, 0, 0, 0.5) 0%,
+                rgba(0, 0, 0, 0.3) 50%,
+                transparent 100%);
+    }
+
+    .we-stand .container {
+        padding: 50px 0;
     }
 
     .we-stand-content {
-        margin: 0 auto;
+        max-width: 100%;
     }
 
     .we-stand .section-heading {
-        font-size: 28px;
+        font-size: 14px;
         letter-spacing: 2px;
+    }
+
+    .we-stand p {
+        font-size: 13px;
     }
 }
 
@@ -245,6 +291,7 @@
     padding: 120px 0;
     overflow: hidden;
     position: relative;
+    margin-top: 80px;
 }
 
 .pillars-slider-wrap {

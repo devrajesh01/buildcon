@@ -61,7 +61,7 @@
     /* Pixel Based Font Sizes */
     --fs-h1: 56px;
     --fs-h2: 36px;
-    --fs-h3: 28px;
+    --fs-h3: 22px;
     --fs-h4: 24px;
     --fs-h5: 20px;
     --fs-h6: 18px;
@@ -97,8 +97,8 @@ html {
 
 body {
     font-family: var(--ff-body);
-    color: var(--clr-text);
-    background-color: var(--clr-light);
+    color: var(--clr-white);
+    background-color: var(--clr-dark);
     line-height: 1.6;
     font-size: var(--fs-body);
 }
@@ -154,7 +154,7 @@ p {
 
 .section-heading {
     color: var(--clr-white);
-    font-size: var(--fs-h3);
+    font-size: var(--fs-h4);
     line-height: 1.3;
     margin-bottom: 0;
 }
