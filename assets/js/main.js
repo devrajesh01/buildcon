@@ -65,7 +65,7 @@ $(document).ready(function () {
 
         breakpoints: {
             1024: {
-                slidesPerView: 4,   // ✅ 3 full + 50% each side
+                slidesPerView: 3,   // ✅ only 3 items
                 centeredSlides: true,
                 spaceBetween: 40,
             }
