@@ -112,13 +112,6 @@
 }
 
 @media (min-width: 992px) {
-    .impact-feature .text-content {
-        padding-left: 50px;
-    }
-    .flex-md-row-reverse .text-content {
-        padding-left: 0;
-        padding-right: 50px;
-    }
     .text-xl-end {
         text-align: right;
     }
@@ -138,7 +131,6 @@
 
 .impact-csr .csr-img {
     width: 100%;
-    max-width: 900px;
     height: auto;
     object-fit: cover;
     border-radius: 6px;
