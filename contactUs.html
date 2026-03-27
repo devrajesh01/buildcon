@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buildcon</title>
+    <title>Contact Us - IM Buildcon</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/video-slider.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/contact-us.css">
 </head>
 
 <body>
@@ -122,203 +123,104 @@
         </div>
     </nav>
 
-    <section class="hero-section">
-        <div class="swiper hero-swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="/assets/images/banner-1.png" alt="Luxury Building 1">
+    <!-- Main Content -->
+    <main class="contact-us-main">
+        <!-- Banner Section -->
+        <section class="contact-banner">
+            <img src="assets/images/contact-us-banner-image.png" alt="Contact Us Banner" class="banner-bg-img">
+            <div class="banner-overlay-text">
+                <span class="line-bold">WE'RE HERE TO HELP YOU</span>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-header mb-5">
+                    <h2 class="contact-heading">GET IN TOUCH</h2>
+                    <p class="contact-subheading"><i>WHAT CAN WE ASSIST YOU WITH?</i></p>
                 </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/banner-2.png" alt="Luxury Building 2">
-                </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/banner-3.png" alt="Luxury Building 3">
-                </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/banner-4.png" alt="Luxury Building 3">
-                </div>
-                <div class="swiper-slide">
-                    <img src="/assets/images/banner-5.png" alt="Luxury Building 3">
-                </div>
-            </div>
-            <!-- Navigation -->
-            <div class="hero-nav-prev"><i class="fa-solid fa-chevron-left"></i></div>
-            <div class="hero-nav-next"><i class="fa-solid fa-chevron-right"></i></div>
-            <!-- Pagination -->
-            <div class="hero-pagination"></div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-top">
-                <h3 class="section-heading">Building With Purpose</h3>
-                <p>A Mumbai-based real estate company shaped by integrity, intention, and
-                    enduring design. Since 2011, IM Buildcon has been creating residential and commercial spaces
-                    that balance thoughtful architecture with everyday comfort homes built to last, and
-                    relationships built on trust.</p>
-            </div>
-
-        </div>
-    </section>
-    <section class="we-stand">
-        <div class="sec-image"><img src="/assets/images/banner-image-girl.png" alt="Terrace View"></div>
-        <div class="container">
-            <div class="we-stand-content">
-                <h4 class="section-heading">We Stand Where Few Stood</h4>
-                <p>Our tagline reflects the courage to build with conviction choosing
-                    integrity over shortcuts, purpose over pace, and long-term value over momentary gain. It is
-                    a reminder that progress is meaningful when it is principled.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pillars Section -->
-    <section class="pillars-section">
-        <div class="container">
-            <div class="section-title">
-                <h3 class="section-heading">The Principles That Endure</h3>
-            </div>
-        </div>
-        <div class="pillars-slider-wrap">
-            <div class="swiper pillars-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="pillar-card">
-                            <div class="pillar-header">
-                                <h4 class="pillar-title">Integrity</h4>
+                <div class="contact-form-wrapper">
+                    <form action="#" class="contact-form">
+                        <div class="row g-4">
+                            <!-- Field 1 -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="text" class="form-control custom-input" placeholder="Name*" required>
+                                </div>
                             </div>
-                            <div class="pillar-image">
-                                <img src="/assets/images/Integrity.png" alt="Integrity">
+                            <!-- Field 2 -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="email" class="form-control custom-input" placeholder="Email ID"
+                                        required>
+                                </div>
                             </div>
-                            <div class="pillar-footer">
-                                <p>Every decision is guided by transparency and ethics that stand the test of time.</p>
-
+                            <!-- Field 3 -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="tel" class="form-control custom-input" placeholder="Mobile Number"
+                                        required>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="pillar-card">
-                            <div class="pillar-header">
-                                <h4 class="pillar-title">Commitment</h4>
+                            <!-- Field 4 -->
+                            <div class="col-md-4">
+                                <div class="form-group select-wrapper">
+                                    <select class="form-control custom-input custom-select" required>
+                                        <option value="" disabled selected>Select Country</option>
+                                        <option value="india">India</option>
+                                        <option value="us">United States</option>
+                                        <option value="uk">United Kingdom</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down select-icon"></i>
+                                </div>
                             </div>
-                            <div class="pillar-image">
-                                <img src="/assets/images/Commitment.png" alt="Commitment">
+                            <!-- Field 5 -->
+                            <div class="col-md-4">
+                                <div class="form-group select-wrapper">
+                                    <select class="form-control custom-input custom-select" required>
+                                        <option value="" disabled selected>Select City</option>
+                                        <option value="mumbai">Mumbai</option>
+                                        <option value="delhi">Delhi</option>
+                                        <option value="bangalore">Bangalore</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down select-icon"></i>
+                                </div>
                             </div>
-                            <div class="pillar-footer">
-                                <p>Our word is our bond, honoured through consistency, care, and long-term
-                                    accountability.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="pillar-card">
-                            <div class="pillar-header">
-                                <h4 class="pillar-title">Thoughtful Design</h4>
-                            </div>
-                            <div class="pillar-image">
-                                <img src="/assets/images/Thoughtful design.png" alt="Thoughtful Design">
-                            </div>
-                            <div class="pillar-footer">
-                                <p>Design that balances beauty, function, and the quiet rhythms of living.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="pillar-card">
-                            <div class="pillar-header">
-                                <h4 class="pillar-title">Quiet Luxury</h4>
-                            </div>
-                            <div class="pillar-image">
-                                <img src="/assets//images/Quiet Luxury.png" alt="Quiet Luxury">
-                            </div>
-                            <div class="pillar-footer">
-                                <p>Refinement lives in the details subtle finishes, calm aesthetics, and timeless
-                                    elegance.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="pillar-card">
-                            <div class="pillar-header">
-                                <h4 class="pillar-title">People First</h4>
-                            </div>
-                            <div class="pillar-image">
-                                <img src="/assets/images/people first.png" alt="People First">
-                            </div>
-                            <div class="pillar-footer">
-                                <p>We listen closely, build responsibly, and design spaces that grow with the people who
-                                    call them home.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="pillar-card">
-                            <div class="pillar-header">
-                                <h4 class="pillar-title">Evolving Vision</h4>
-                            </div>
-                            <div class="pillar-image">
-                                <img src="/assets/images/Evolving VIsion.png" alt="Evolving Vision">
-                            </div>
-                            <div class="pillar-footer">
-                                <p>As we expand, our focus remains on sustainability, relevance, and creating lasting
-                                    value for communities.</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- DUPLICATE SET FOR GAP-FREE LOOP -->
-
-
-                </div>
-            </div>
-            <div class="pillars-nav">
-                <button class="pillars-prev"><i class="fa-solid fa-chevron-left"></i></button>
-                <div class="pillars-pagination"></div>
-                <button class="pillars-next"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </section>
-
-    <section class="video-section">
-        <div class="container">
-            <div class="section-title">
-                <h3 class="section-heading">What Our People Feel </h3>
-            </div>
-            <div class="maincontent">
-                <div class="video-wrapper" id="testimonialVideoWrapper">
-                    <video id="testimonialVideo" poster="assets/images/testimonilas-video.jpeg">
-                        <source src="assets/videos/testimonilas-video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-            <!-- <div class="video-swiper-wrap">
-                <div class="swiper video-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="video-card">
-                                <div class="video-container">
-                                    <iframe src="https://www.youtube.com/embed/rutCVOOj4KQ?modestbranding=1&rel=0"
-                                        frameborder="0" allowfullscreen></iframe>
+                            <!-- Field 6 -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="text" class="form-control custom-input" placeholder="Message" required>
                                 </div>
                             </div>
                         </div>
-                    </div>
+
+                        <!-- Checkbox -->
+                        <div class="row mt-5">
+                            <div class="col-12">
+                                <div class="form-check custom-checkbox d-flex align-items-center">
+                                    <input class="form-check-input me-3" type="checkbox" id="privacyPolicyCheck"
+                                        required>
+                                    <label class="form-check-label privacy-text" for="privacyPolicyCheck">
+                                        By checking this box, you agree to our <a href="#" class="privacy-link">Privacy
+                                            Policy</a> and consent to be contacted with relevant updates.
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="row mt-5">
+                            <div class="col-12">
+                                <button type="submit" class="btn submit-btn">SUBMIT</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="video-nav">
-                    <button class="video-prev"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button class="video-next"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
-            </div> -->
-        </div>
-    </section>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer pb-5">
@@ -370,7 +272,7 @@
                         <li><a href="ourImpact.html">Our Impact</a></li>
                         <li><a href="">Perspective</a></li>
                         <li><a href="">Careers</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="contactUs.html">Contact</a></li>
                     </ul>
                     <div class="copyright-text text-lg-start m-0 p-0 text-start pb-2">
                         <span><i class="fa-regular fa-copyright"></i> 2026 All Rights Reserved by IM Buildcon</span>
