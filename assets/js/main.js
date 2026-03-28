@@ -107,6 +107,29 @@ $(document).ready(function () {
         },
     });
 
+
+
+    // Initialize Spacious Swiper
+    const spaciousSwiper = new Swiper('.spacious-swiper', {
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        spaceBetween: 40,
+        speed: 1000,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        grabCursor: true,
+        navigation: {
+            nextEl: '.spacious-next',
+            prevEl: '.spacious-prev',
+        },
+        loopedSlides: 12, 
+        loopAdditionalSlides: 6,
+        watchSlidesProgress: true,
+    });
+
     // Testimonial Video Logic
     const videoWrapper = document.getElementById('testimonialVideoWrapper');
     const video = document.getElementById('testimonialVideo');

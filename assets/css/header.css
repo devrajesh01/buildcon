@@ -1,15 +1,12 @@
 .main-header {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
+    /* Separate from banner */
     width: 100%;
     z-index: 1000;
-    padding: var(--header-padding) 0;
+    padding: 15px 0;
     transition: var(--transition-base);
-    background: rgba(0, 0, 0, 0.4);
-    /* Slightly darker for better visibility on light images */
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    background: #000000;
+    /* Solid dark background */
     border-bottom: 1px solid var(--clr-white-10);
 }
 
@@ -91,7 +88,8 @@
 .nav-menu ul li {
     margin: 0 15px;
     position: relative !important;
-    transform: translate(0); /* Senior Dev fix: ensure alignment context in flex containers */
+    transform: translate(0);
+    /* Senior Dev fix: ensure alignment context in flex containers */
     padding: 25px 0;
 }
 
@@ -132,8 +130,9 @@
     left: -2000px;
     right: -2000px;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.7);
+    /* More transparent as requested */
+
     z-index: -1;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -204,7 +203,8 @@
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 30px;
+    /* Increased gap to match image */
 }
 
 .header-actions .action-item {

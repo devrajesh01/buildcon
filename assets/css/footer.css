@@ -111,6 +111,7 @@
 
 .ftr_nav li a {
     font-size: 12px;
+    letter-spacing: 1px;
 }
 
 
@@ -118,18 +119,19 @@
 .socimedia {
     display: flex;
     gap: 12px;
-    margin-top: 20px;
+
+    justify-content: space-between;
 }
 
 .socimedia a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--clr-white-30);
+    width: auto;
+    height: auto;
+    border: none;
     color: var(--clr-white);
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
     position: relative;
     overflow: hidden;
@@ -137,25 +139,8 @@
     z-index: 1;
 }
 
-.socimedia a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: var(--clr-gold);
-    transition: height 0.4s ease;
-    z-index: -1;
-}
-
-.socimedia a:hover::before {
-    height: 100%;
-}
-
 .socimedia a:hover {
-    color: var(--clr-white);
-    border-color: var(--clr-gold);
+    color: var(--clr-gold);
     transform: translateY(-3px);
 }
 
@@ -167,12 +152,24 @@
 }
 
 .ftr_col p a i {
-    margin-right: 6px;
+    display: flex;
+    color: var(--clr-gold);
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-right: 12px;
+    font-size: 14px;
+    transition: var(--transition-base);
+}
+
+.ftr_col p a:hover i {
     color: var(--clr-gold);
 }
 
-.ftr_col p a:hover {
-    color: var(--clr-gold);
+.ftr_col p a span {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
 }
 
 .ftr_col p,

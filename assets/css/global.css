@@ -38,7 +38,7 @@
 ================================= */
 :root {
     /* Brand Colors */
-    --clr-gold: #95c12b;
+    --clr-gold: #e0c296;
     --clr-dark: #000;
     --clr-white: #FFFFFF;
     --clr-light: #ffffff63;
@@ -84,7 +84,7 @@
 
 /* ===============================
    2. GLOBAL RESET
-================================= */
+   ================================= */
 * {
     margin: 0;
     padding: 0;
@@ -99,8 +99,10 @@ body {
     font-family: var(--ff-body);
     color: var(--clr-white);
     background-color: var(--clr-dark);
-    line-height: 1.6;
+    line-height: 1.7;
     font-size: var(--fs-body);
+    letter-spacing: 0.5px;
+    overflow-x: hidden;
 }
 
 /* ===============================
