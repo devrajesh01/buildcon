@@ -401,7 +401,8 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background: rgba(43, 34, 44, 0.95); /* Extremely dark, slightly transparent */
+    background: rgb(16 13 16 / 88%);
+    /* Extremely dark, slightly transparent */
     padding: 60px 0;
     opacity: 0;
     visibility: hidden;
@@ -466,7 +467,7 @@
     .search-overlay-container {
         padding: 40px 0;
     }
-    
+
     .search-input {
         font-size: 14px;
         padding: 10px 40px 10px 0;
@@ -481,7 +482,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background: rgba(43, 34, 44, 0.95);
+    background: rgb(16 13 16 / 88%);
     padding: 60px 0;
     opacity: 0;
     visibility: hidden;
@@ -489,6 +490,8 @@
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 999;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-right: 270px;
+    padding-left: 270px;
 }
 
 .enquiry-overlay-container.active {
@@ -543,7 +546,8 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     cursor: pointer;
-    color: rgba(255, 255, 255, 0.6) !important; /* matches placeholder initially */
+    color: rgba(255, 255, 255, 0.6) !important;
+    /* matches placeholder initially */
 }
 
 /* Change font color when option selected */
@@ -590,11 +594,11 @@
     .enquiry-overlay-container {
         padding: 40px 0;
     }
-    
+
     .enquiry-title {
         margin-bottom: 30px;
     }
-    
+
     .enquiry-form .form-group {
         margin-bottom: 25px;
     }
