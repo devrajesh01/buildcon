@@ -186,137 +186,58 @@
    SPACIOUS SECTION
 ================================= */
 .spacious-section {
-
     background: #fff;
     color: #000;
 }
 
-.spacious-swiper {
-    padding: 80px 0 200px 0;
-    /* Extra bottom padding for absolute text */
-    max-width: 1500px;
-    margin: 0 auto;
-    overflow: visible !important;
-}
-
-.spacious-swiper .swiper-wrapper {
-    align-items: center;
-    /* Vertically center the side images relative to the active image */
-}
-
-.spacious-swiper .swiper-slide {
-    width: 350px;
-    transition: all 0.6s ease;
-    opacity: 0.6;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    /* For absolute `.slide-content` positioning */
-}
-
-.spacious-swiper .swiper-slide-active {
-    width: 650px;
-    /* Wider active slide */
-    opacity: 1;
-}
-
-.spacious-img {
+.spacious-main-img,
+.spacious-side-img {
     width: 100%;
-    height: 350px;
-    /* Shorter non-active slides */
+    height: 400px;
     object-fit: cover;
-    border-radius: 4px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    transition: all 0.6s ease;
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
-.spacious-swiper .swiper-slide-active .spacious-img {
-    height: 500px;
-    /* Taller active slide */
+.spacious-main-img:hover,
+.spacious-side-img:hover {
+    transform: translateY(-3px);
 }
 
-.slide-content {
-    position: absolute;
-    top: calc(100% + 30px);
-    left: 0;
-    width: 100%;
-    padding: 0 5px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    transition: all 0.5s ease;
-}
-
-.spacious-swiper .swiper-slide-active .slide-content {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+.spacious-center-wrap {
+    text-align: left;
 }
 
 .spacious-title {
     font-family: var(--ff-heading);
-    font-size: clamp(20px, 2.5vw, 24px);
+    font-size: clamp(16px, 1.8vw, 20px);
     font-weight: 500;
     line-height: 1.4;
-    margin-bottom: 15px;
-    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: #000;
 }
 
 .spacious-text {
     font-family: var(--ff-body);
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.8;
     color: #555;
-    max-width: 95%;
+    margin-bottom: 0;
 }
 
-/* Navigation Arrows */
-.spacious-swiper .swiper-button-next,
-.spacious-swiper .swiper-button-prev {
-    color: #333;
-    background: rgba(255, 255, 255, 0.95);
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.spacious-swiper .swiper-button-next:after,
-.spacious-swiper .swiper-button-prev:after {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.spacious-swiper .swiper-button-next:hover,
-.spacious-swiper .swiper-button-prev:hover {
-    background: #000;
-    color: #fff;
-}
-
-.spacious-prev {
-    left: 20px !important;
-}
-
-.spacious-next {
-    right: 20px !important;
-}
-
-@media (max-width: 1200px) {
-    .spacious-img {
-        height: 350px;
+@media (max-width: 991px) {
+    .spacious-main-img,
+    .spacious-side-img {
+        height: 300px;
     }
 }
 
 @media (max-width: 767px) {
-    .spacious-img {
-        height: 280px;
-    }
-
-    .spacious-title {
-        font-size: 18px;
+    .spacious-main-img,
+    .spacious-side-img {
+        height: 250px;
     }
 }
 
