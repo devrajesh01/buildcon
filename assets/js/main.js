@@ -40,6 +40,59 @@ $(document).ready(function () {
     $(document).on('keydown', function (e) {
         if (e.key === 'Escape') {
             closeMobileNav();
+            // Also close search/enquiry if open
+            if ($('.search-overlay-container').hasClass('active')) {
+                $('.search-overlay-container').removeClass('active');
+            }
+            if ($('.enquiry-overlay-container').hasClass('active')) {
+                $('.enquiry-overlay-container').removeClass('active');
+            }
+        }
+    });
+
+    // Search Toggle Logic
+    $('.search-btn, .mobile-action-item:contains("Search"), .action-item:contains("Search")').on('click', function(e) {
+        e.preventDefault();
+        
+        // Close enquiry if open
+        if ($('.enquiry-overlay-container').hasClass('active')) {
+            $('.enquiry-overlay-container').removeClass('active');
+        }
+
+        $('.search-overlay-container').toggleClass('active');
+        if($('.search-overlay-container').hasClass('active')) {
+            setTimeout(function() {
+                $('.search-input').focus();
+            }, 100);
+        }
+    });
+
+    // Enquiry Toggle Logic
+    $('.enquiry-btn, .mobile-action-item:contains("Enquire"), .action-item:contains("Enquire")').on('click', function(e) {
+        e.preventDefault();
+        
+        // Close search if open
+        if ($('.search-overlay-container').hasClass('active')) {
+            $('.search-overlay-container').removeClass('active');
+        }
+
+        $('.enquiry-overlay-container').toggleClass('active');
+    });
+
+    // Close overlays when clicking outside
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.search-overlay-container').length && 
+            !$(e.target).closest('.action-item:contains("Search")').length && 
+            !$(e.target).closest('.mobile-action-item:contains("Search")').length && 
+            !$(e.target).closest('.search-btn').length) {
+            $('.search-overlay-container').removeClass('active');
+        }
+
+        if (!$(e.target).closest('.enquiry-overlay-container').length && 
+            !$(e.target).closest('.action-item:contains("Enquire")').length && 
+            !$(e.target).closest('.mobile-action-item:contains("Enquire")').length && 
+            !$(e.target).closest('.enquiry-btn').length) {
+            $('.enquiry-overlay-container').removeClass('active');
         }
     });
 

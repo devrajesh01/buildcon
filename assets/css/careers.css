@@ -1,0 +1,135 @@
+/* Careers Page Specific Styles */
+.careers-main {
+    background-color: #ffffff;
+}
+
+.careers-banner {
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+    position: relative;
+    background-color: #f1f1f1;
+}
+
+.careers-form-section {
+    margin-bottom: -80px;
+}
+
+.careers-banner .banner-bg-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 60vh;
+}
+
+.careers-form-card {
+    padding-bottom: 70px;
+}
+
+.careers-intro .section-title {
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+/* Form Styles */
+.careers-form-card {
+    background-color: #000000;
+    border-radius: 40px;
+    /* Very rounded corners */
+    color: #ffffff;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.minimal-input {
+    background: transparent !important;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 0;
+    color: #ffffff !important;
+    padding: 10px 0;
+    font-size: 15px;
+    font-family: var(--ff-body, sans-serif);
+    transition: all 0.3s ease;
+}
+
+.minimal-input:focus {
+    box-shadow: none;
+    border-bottom: 1px solid #ffffff !important;
+}
+
+/* Placeholder styling */
+.minimal-input::placeholder {
+    color: #b0b0b0;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.minimal-input:-ms-input-placeholder {
+    color: #b0b0b0;
+}
+
+.minimal-input::-ms-input-placeholder {
+    color: #b0b0b0;
+}
+
+/* File Upload Customization */
+.file-upload-group {
+    margin-bottom: 3rem !important;
+    /* Space before submit */
+    position: relative;
+}
+
+.file-upload-group .minimal-input {
+    height: 45px;
+    /* match input height */
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.file-label {
+    color: #b0b0b0;
+    font-size: 13px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* Button */
+.btn-gold-submit {
+    background-color: var(--clr-btn-gold, #acd836) !important;
+    color: #2b2b2b !important;
+    max-width: 250px;
+    margin: 0;
+    border-radius: 2px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-gold-submit:hover {
+    background-color: #ffffff !important;
+    color: var(--clr-btn-gold, #acd836) !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .careers-banner {
+        min-height: 250px;
+    }
+
+    .careers-banner .banner-bg-img {
+        min-height: 250px;
+    }
+
+    .careers-form-card {
+        border-radius: 30px;
+        margin: 0 15px;
+    }
+
+    .btn-gold-submit {
+        max-width: 100%;
+    }
+}

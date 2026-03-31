@@ -39,6 +39,8 @@
 :root {
     /* Brand Colors */
     --clr-gold: #e0c296;
+    --clr-gold-2: #acd836;
+    --clr-btn-gold: #acd836; /* Bright green-gold used for buttons */
     --clr-dark: #000;
     --clr-white: #FFFFFF;
     --clr-light: #ffffff63;

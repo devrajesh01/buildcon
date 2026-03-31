@@ -173,8 +173,8 @@
 
 /* Submit Button */
 .submit-btn {
-    background-color: var(--clr-gold);
-    color: var(--clr-white);
+    background-color: var(--clr-btn-gold);
+    color: var(--clr-dark);
     border: none;
     border-radius: 0;
     padding: 12px 40px;
@@ -187,7 +187,7 @@
 
 .submit-btn:hover {
     background-color: var(--clr-white);
-    color: var(--clr-dark);
+    color: var(--clr-btn-gold);
 }
 
 /* Responsive */

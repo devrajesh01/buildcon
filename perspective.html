@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - IM Buildcon</title>
+    <title>Perspective | IM Buildcon</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/video-slider.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/contact-us.css">
+    <link rel="stylesheet" href="assets/css/perspective.css">
 </head>
 
 <body>
@@ -29,8 +29,8 @@
                 <ul class="d-flex list-unstyled m-0">
                     <li><a href="index.html">Our Story</a></li>
                     <li class="has-submenu">
-                        <a href="javascript:void(0)" style="cursor: default;">Our Projects <i class="fa-solid fa-chevron-down ms-1"
-                                style="font-size: 10px;"></i></a>
+                        <a href="javascript:void(0)" style="cursor: default;">Our Projects <i
+                                class="fa-solid fa-chevron-down ms-1" style="font-size: 10px;"></i></a>
                         <div class="submenu">
                             <ul class="submenu-list">
                                 <li><a href="applaud-38.html">APPLAUD 38 <span class="subtitle">Goregaon</span></a>
@@ -41,10 +41,9 @@
                         </div>
                     </li>
                     <li><a href="ourImpact.html">Our Impact</a></li>
-                    <li><a href="#">OUR PERSPECTIVE</a></li>
+                    <li><a href="perspective.html" class="active">OUR PERSPECTIVE</a></li>
                     <li class="has-submenu">
-                        <a href="#">More <i class="fa-solid fa-chevron-down ms-1"
-                                style="font-size: 10px;"></i></a>
+                        <a href="#">More <i class="fa-solid fa-chevron-down ms-1" style="font-size: 10px;"></i></a>
                         <div class="submenu">
                             <ul class="submenu-list">
                                 <li><a href="careers.html">Careers</a></li>
@@ -147,7 +146,7 @@
                 </ul>
             </li>
             <li><a href="ourImpact.html">Our Impact</a></li>
-            <li><a href="#">Perspective</a></li>
+            <li><a href="perspective.html" class="active">Perspective</a></li>
             <li><a href="#">More</a>
                 <ul class="mobile-submenu list-unstyled ms-3">
                     <li><a href="careers.html" style="font-size: 13px; opacity: 0.8;">Careers</a></li>
@@ -179,103 +178,123 @@
         </div>
     </nav>
 
+
     <!-- Main Content -->
-    <main class="contact-us-main">
+    <main class="perspective-main">
         <!-- Banner Section -->
-        <section class="contact-banner">
-            <img src="assets/images/contact-us-banner-image.png" alt="Contact Us Banner" class="banner-bg-img">
-            <div class="banner-overlay-text">
-                <span class="line-bold">WE'RE HERE TO HELP YOU</span>
+        <section class="perspective-banner position-relative d-flex align-items-center">
+            <img src="assets/images/perpective/Web-Banner-perspective.png" alt="Perspective Banner"
+                class="banner-bg-img w-100 object-fit-cover">
+            <div class="banner-logo-overlay position-absolute top-50 translate-middle-y text-end"
+                style="right: 10%;">
+                <img src="assets/images/perpective/The-perspective-logo.PNG" alt="The Perspective Logo"
+                    class="banner-logo img-fluid">
             </div>
         </section>
 
-        <!-- Contact Form Section -->
-        <section class="contact-section">
-            <div class="container">
-                <div class="contact-header mb-5">
-                    <h2 class="contact-heading">GET IN TOUCH</h2>
-                    <p class="contact-subheading"><i>WHAT CAN WE ASSIST YOU WITH?</i></p>
-                </div>
+        <!-- Intro Section -->
+        <section class="perspective-intro py-5 section-bg-light">
+            <div class="container py-lg-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0 text-center text-lg-end">
+                        <img src="assets/images/perpective/SM-Mockup-2-removebg-preview.png" alt="Mockup"
+                            class="img-fluid mockup-img">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="intro-content ps-lg-5">
+                            <p class="intro-text mb-4">
+                                Perspective is a platform that extends<br class="d-none d-md-block">
+                                IM Buildcon's philosophy beyond real estate.<br class="d-none d-md-block">
+                                It explores ideas across design,<br class="d-none d-md-block">
+                                architecture, luxury, and contemporary thought,<br class="d-none d-md-block">
+                                encouraging dialogue around how spaces influence<br class="d-none d-md-block">
+                                perception, lifestyle, and experience.
+                            </p>
+                            <p class="intro-text mb-5">
+                                Led by Hafsa Khan, the platform examines<br class="d-none d-md-block">
+                                diverse topics and challenges conventional viewpoints<br class="d-none d-md-block">
+                                while creating meaningful conversations across<br class="d-none d-md-block">
+                                design and culture.
+                            </p>
 
-                <div class="contact-form-wrapper">
-                    <form action="#" class="contact-form">
-                        <div class="row g-4">
-                            <!-- Field 1 -->
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <input type="text" class="form-control custom-input" placeholder="Name*" required>
-                                </div>
-                            </div>
-                            <!-- Field 2 -->
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <input type="email" class="form-control custom-input" placeholder="Email ID"
-                                        required>
-                                </div>
-                            </div>
-                            <!-- Field 3 -->
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <input type="tel" class="form-control custom-input" placeholder="Mobile Number"
-                                        required>
-                                </div>
-                            </div>
-                            <!-- Field 4 -->
-                            <div class="col-md-4">
-                                <div class="form-group select-wrapper">
-                                    <select class="form-control custom-input custom-select" required>
-                                        <option value="" disabled selected>Select Country</option>
-                                        <option value="india">India</option>
-                                        <option value="us">United States</option>
-                                        <option value="uk">United Kingdom</option>
-                                    </select>
-                                    <i class="fa-solid fa-chevron-down select-icon"></i>
-                                </div>
-                            </div>
-                            <!-- Field 5 -->
-                            <div class="col-md-4">
-                                <div class="form-group select-wrapper">
-                                    <select class="form-control custom-input custom-select" required>
-                                        <option value="" disabled selected>Select City</option>
-                                        <option value="mumbai">Mumbai</option>
-                                        <option value="delhi">Delhi</option>
-                                        <option value="bangalore">Bangalore</option>
-                                    </select>
-                                    <i class="fa-solid fa-chevron-down select-icon"></i>
-                                </div>
-                            </div>
-                            <!-- Field 6 -->
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <input type="text" class="form-control custom-input" placeholder="Message" required>
+                            <div class="connect-links mt-4">
+                                <h5 class="connect-title mb-3">Connect With Us</h5>
+                                <div class="social-icons d-flex gap-3">
+                                    <a target="_blank" href="https://www.facebook.com/IMBuildconOfficial"
+                                        class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a target="_blank" href="https://www.instagram.com/imbuildcon/"
+                                        class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                                    <a target="_blank" href="#" class="social-icon"><i
+                                            class="fa-brands fa-youtube"></i></a>
+                                    <a target="_blank" href="https://www.linkedin.com/company/im-buildcon/"
+                                        class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Checkbox -->
-                        <div class="row mt-5">
-                            <div class="col-12">
-                                <div class="form-check custom-checkbox d-flex align-items-center">
-                                    <input class="form-check-input me-3" type="checkbox" id="privacyPolicyCheck"
-                                        required>
-                                    <label class="form-check-label privacy-text" for="privacyPolicyCheck">
-                                        By checking this box, you agree to our <a href="#" class="privacy-link">Privacy
-                                            Policy</a> and consent to be contacted with relevant updates.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Submit Button -->
-                        <div class="row mt-5">
-                            <div class="col-12">
-                                <button type="submit" class="btn submit-btn">SUBMIT</button>
-                            </div>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- Youtube Video Section -->
+        <section class="perspective-video py-5 section-bg-light position-relative">
+            <div class="container pb-lg-5">
+                <h3 class="section-title text-center text-uppercase mb-5" style="letter-spacing: 2px;">Tap To Watch</h3>
+
+                <div class="swiper perspectiveSwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Single Slide -->
+                        <div class="swiper-slide text-center">
+                            <a href="#" class="video-link d-inline-block position-relative" data-bs-toggle="modal"
+                                data-bs-target="#videoModal"
+                                data-video="https://www.youtube.com/embed/D0UnqGm_miA?autoplay=1">
+                                <img src="assets/images/perpective/youtube-image.png" alt="Youtube Video"
+                                    class="img-fluid video-thumbnail border-0 shadow-sm"
+                                    style="max-height: 500px; width: 100%; object-fit: cover; object-position: center;">
+                            </a>
+                        </div>
+
+                        <!-- Extra slide just to demonstrate sliding if needed -->
+                        <div class="swiper-slide text-center">
+                            <a href="#" class="video-link d-inline-block position-relative" data-bs-toggle="modal"
+                                data-bs-target="#videoModal"
+                                data-video="https://www.youtube.com/embed/D0UnqGm_miA?autoplay=1">
+                                <img src="assets/images/perpective/youtube-image.png" alt="Youtube Video"
+                                    class="img-fluid video-thumbnail border-0 shadow-sm"
+                                    style="max-height: 500px; width: 100%; object-fit: cover; object-position: center;">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Navigation Buttons -->
+                    <div class="swiper-button-next perspective-next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="swiper-button-prev perspective-prev">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Modal -->
+        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-transparent border-0">
+                    <div class="modal-header border-0 pb-2 justify-content-end">
+                        <button type="button" class="btn-close btn-close-white fs-4" data-bs-dismiss="modal"
+                            aria-label="Close" style="filter: invert(1);"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="ratio ratio-16x9">
+                            <iframe id="youtubeVideo" src="" title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!-- Footer -->
@@ -328,7 +347,7 @@
                         <li><a href="index.html">Our Story</a></li>
                         <li><a href="applaud-38.html">Our Projects</a></li>
                         <li><a href="ourImpact.html">Our Impact</a></li>
-                        <li><a href="">Perspective</a></li>
+                        <li><a href="perspective.html">Perspective</a></li>
                         <li><a href="careers.html">Careers</a></li>
                         <li><a href="contactUs.html">Contact</a></li>
                     </ul>
@@ -351,6 +370,46 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Perspective specific scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Perspective Slider
+            var perspectiveSwiper = new Swiper('.perspectiveSwiper', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                navigation: {
+                    nextEl: '.perspective-next',
+                    prevEl: '.perspective-prev',
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 1,
+                        spaceBetween: 40,
+                    },
+                }
+            });
+
+            // Handle Video Modal
+            var videoModal = document.getElementById('videoModal');
+            var youtubeVideo = document.getElementById('youtubeVideo');
+
+            videoModal.addEventListener('show.bs.modal', function (event) {
+                var button = event.relatedTarget; // Button that triggered the modal
+                var videoSrc = button.getAttribute('data-video'); // Extract info from data-* attributes
+                youtubeVideo.setAttribute('src', videoSrc);
+            });
+
+            videoModal.addEventListener('hide.bs.modal', function (event) {
+                youtubeVideo.setAttribute('src', ''); // Stop video when modal closes
+            });
+        });
+    </script>
 </body>
 
 </html>
