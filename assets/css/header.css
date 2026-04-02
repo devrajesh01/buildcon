@@ -438,7 +438,7 @@
 
 .search-input:focus {
     outline: none;
-    border-bottom-color: var(--clr-gold);
+
 }
 
 .search-input::placeholder {

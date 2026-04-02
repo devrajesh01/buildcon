@@ -1,0 +1,283 @@
+/* =================================
+   STORY PAGE STYLES
+================================= */
+
+/* 1. Hero Section (Right-Side Slider) */
+.story-hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--clr-dark);
+    overflow: hidden;
+    margin-bottom: var(--section-padding); /* 80px gap from the banner to next section */
+}
+
+.story-hero-content {
+    position: absolute;
+    top: 50%;
+    right: 8%; /* Move to right side */
+    transform: translateY(-50%);
+    z-index: 10;
+    width: auto; /* Shrink-to-fit container */
+    text-align: right;
+}
+
+.story-hero-text {
+    max-width: 600px;
+}
+
+.story-hero-title {
+    font-size: 36px;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.story-hero-desc {
+    font-size: 14px;
+    color: var(--clr-white-75);
+    line-height: 1.6;
+}
+
+.story-hero-slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.story-hero-slider-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+    z-index: 6;
+}
+
+.story-hero-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.story-hero-swiper .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.story-hero-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 2. Story, Vision, Mission Section */
+.story-grid-section {
+    padding-bottom: var(--section-padding);
+    background-color: var(--clr-white); /* White background as requested */
+}
+
+.story-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.story-left-col {
+    grid-row: span 2;
+}
+
+.story-card {
+    background-color: transparent;
+}
+
+.story-card-img {
+    width: 100%;
+    margin-bottom: 25px;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+}
+
+.story-card-img.horizontal {
+    aspect-ratio: 16/9;
+}
+
+.story-card-title {
+    font-size: 18px;
+    color: var(--clr-dark); /* Dark title */
+    font-weight: 700;
+    margin-bottom: 15px; /* Adjust spacing as per screenshot */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.story-card-text {
+    font-size: 13px; /* Smaller text size */
+    color: #333; /* Dark gray for readability on white */
+    line-height: 1.6;
+}
+
+.vision-mission-col {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* Spacing between Vision and Mission */
+}
+
+/* 3. Leadership Section */
+.leadership-section {
+    padding-bottom: var(--section-padding);
+    background-color: var(--clr-dark);
+}
+
+.leadership-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.leadership-header h2 {
+    font-size: 42px;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+
+.main-leader-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 80px;
+}
+
+.main-leader-img {
+    flex: 0 0 450px;
+    height: 550px;
+}
+
+.main-leader-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-leader-info {
+    flex: 1;
+}
+
+.leader-name {
+    font-size: 24px;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.leader-role {
+    font-size: 13px;
+    color: var(--clr-white-60);
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.leader-know-more {
+    color: var(--clr-gold-2);
+    text-transform: uppercase;
+    font-size: 12px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.leader-know-more:hover {
+    text-decoration: underline;
+}
+
+.leaders-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.sub-leader-card {
+    text-align: left;
+}
+
+.sub-leader-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.sub-leader-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.sub-leader-card:hover .sub-leader-img img {
+    transform: scale(1.05);
+}
+
+.sub-leader-name {
+    font-size: 16px;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.sub-leader-role {
+    font-size: 11px;
+    color: var(--clr-white-60);
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Bottom leaders (centered) */
+.leaders-grid-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 60px;
+}
+
+.leaders-grid-bottom .sub-leader-card {
+    flex: 0 0 calc(33.333% - 54px);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .story-hero-title { font-size: 48px; }
+    .main-leader-container { flex-direction: column; gap: 40px; text-align: center; }
+    .main-leader-img { flex: 0 0 100%; width: 100%; height: auto; max-width: 500px; margin: 0 auto; }
+}
+
+@media (max-width: 991px) {
+    .story-hero { height: auto; min-height: 100vh; flex-direction: column; padding-top: 120px; }
+    .story-hero-content { padding: 40px; text-align: center; }
+    .story-hero-slider-container { position: relative; width: 90%; height: 400px; transform: none; top: 0; margin: 40px auto; }
+    .story-grid-container { grid-template-columns: 1fr; }
+    .vision-mission-col { gap: 40px; }
+    .leaders-grid { grid-template-columns: repeat(2, 1fr); }
+    .leaders-grid-bottom { flex-direction: column; align-items: center; gap: 40px; }
+}
+
+@media (max-width: 576px) {
+    .story-hero-title { font-size: 32px; }
+    .leaders-grid { grid-template-columns: 1fr; }
+    .main-leader-img { height: 400px; }
+}

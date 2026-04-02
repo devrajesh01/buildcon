@@ -145,6 +145,20 @@ $(document).ready(function () {
             nextEl: '.hero-nav-next',
             prevEl: '.hero-nav-prev',
         },
+        on: {
+            slideChange: function() {
+                // Find all videos in the swiper
+                const swiper = this;
+                const activeSlide = swiper.slides[swiper.activeIndex];
+                const videos = activeSlide.querySelectorAll('video');
+                
+                // Play video in active slide
+                videos.forEach(v => {
+                    v.currentTime = 0;
+                    v.play();
+                });
+            }
+        }
     });
 
     // Initialize Video Swiper
