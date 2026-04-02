@@ -51,26 +51,26 @@ $(document).ready(function () {
     });
 
     // Search Toggle Logic
-    $('.search-btn, .mobile-action-item:contains("Search"), .action-item:contains("Search")').on('click', function(e) {
+    $('.search-btn, .mobile-action-item:contains("Search"), .action-item:contains("Search")').on('click', function (e) {
         e.preventDefault();
-        
+
         // Close enquiry if open
         if ($('.enquiry-overlay-container').hasClass('active')) {
             $('.enquiry-overlay-container').removeClass('active');
         }
 
         $('.search-overlay-container').toggleClass('active');
-        if($('.search-overlay-container').hasClass('active')) {
-            setTimeout(function() {
+        if ($('.search-overlay-container').hasClass('active')) {
+            setTimeout(function () {
                 $('.search-input').focus();
             }, 100);
         }
     });
 
     // Enquiry Toggle Logic
-    $('.enquiry-btn, .mobile-action-item:contains("Enquire"), .action-item:contains("Enquire")').on('click', function(e) {
+    $('.enquiry-btn, .mobile-action-item:contains("Enquire"), .action-item:contains("Enquire")').on('click', function (e) {
         e.preventDefault();
-        
+
         // Close search if open
         if ($('.search-overlay-container').hasClass('active')) {
             $('.search-overlay-container').removeClass('active');
@@ -80,17 +80,17 @@ $(document).ready(function () {
     });
 
     // Close overlays when clicking outside
-    $(document).on('click', function(e) {
-        if (!$(e.target).closest('.search-overlay-container').length && 
-            !$(e.target).closest('.action-item:contains("Search")').length && 
-            !$(e.target).closest('.mobile-action-item:contains("Search")').length && 
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.search-overlay-container').length &&
+            !$(e.target).closest('.action-item:contains("Search")').length &&
+            !$(e.target).closest('.mobile-action-item:contains("Search")').length &&
             !$(e.target).closest('.search-btn').length) {
             $('.search-overlay-container').removeClass('active');
         }
 
-        if (!$(e.target).closest('.enquiry-overlay-container').length && 
-            !$(e.target).closest('.action-item:contains("Enquire")').length && 
-            !$(e.target).closest('.mobile-action-item:contains("Enquire")').length && 
+        if (!$(e.target).closest('.enquiry-overlay-container').length &&
+            !$(e.target).closest('.action-item:contains("Enquire")').length &&
+            !$(e.target).closest('.mobile-action-item:contains("Enquire")').length &&
             !$(e.target).closest('.enquiry-btn').length) {
             $('.enquiry-overlay-container').removeClass('active');
         }
@@ -137,21 +137,21 @@ $(document).ready(function () {
             delay: 5000,
             disableOnInteraction: false,
         },
-        pagination: {
-            el: '.hero-pagination',
-            clickable: true,
-        },
+        // pagination: {
+        //     el: '.hero-pagination',
+        //     clickable: true,
+        // },
         navigation: {
             nextEl: '.hero-nav-next',
             prevEl: '.hero-nav-prev',
         },
         on: {
-            slideChange: function() {
+            slideChange: function () {
                 // Find all videos in the swiper
                 const swiper = this;
                 const activeSlide = swiper.slides[swiper.activeIndex];
                 const videos = activeSlide.querySelectorAll('video');
-                
+
                 // Play video in active slide
                 videos.forEach(v => {
                     v.currentTime = 0;
