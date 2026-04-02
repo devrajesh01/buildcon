@@ -42,7 +42,7 @@
                     <li><a href="ourImpact.html">Our Impact</a></li>
                     <li><a href="perspective.html">OUR PERSPECTIVE</a></li>
                     <li class="has-submenu">
-                        <a href="#">More <i class="fa-solid fa-chevron-down ms-1"
+                        <a href="javascript:void(0)" style="cursor: default;">More <i class="fa-solid fa-chevron-down ms-1"
                                 style="font-size: 10px;"></i></a>
                         <div class="submenu">
                             <ul class="submenu-list">
@@ -67,6 +67,66 @@
         </div>
     </header>
 
+    <!-- Search Overlay -->
+    <div class="search-overlay-container">
+        <div class="container relative">
+            <form class="search-form d-flex align-items-center" onsubmit="event.preventDefault();">
+                <input type="text" placeholder="WHAT ARE YOU LOOKING ?" class="search-input w-100">
+                <button type="submit" class="search-submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Enquiry Overlay -->
+    <div class="enquiry-overlay-container">
+        <div class="container relative">
+            <h3 class="enquiry-title">REQUEST A CALL BACK</h3>
+            <form class="enquiry-form" action="smtp/sendemail.php" method="POST">
+                <input type="hidden" name="form_type" value="enquiry">
+                <div class="row">
+                    <!-- Left Column -->
+                    <div class="col-md-6 pe-md-5">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="NAME" class="enquiry-input" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="EMAIL ID" class="enquiry-input" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="CONTACT NUMBER" class="enquiry-input" required>
+                        </div>
+                    </div>
+                    <!-- Right Column -->
+                    <div class="col-md-6 ps-md-5">
+                        <div class="form-group enquiry-select-wrapper">
+                            <select name="country" class="enquiry-select" required>
+                                <option value="" disabled selected>SELECT COUNTRY</option>
+                                <option value="india">INDIA</option>
+                                <option value="usa">USA</option>
+                                <option value="uk">UK</option>
+                                <option value="uae">UAE</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down select-icon"></i>
+                        </div>
+                        <div class="form-group enquiry-select-wrapper">
+                            <select name="city" class="enquiry-select" required>
+                                <option value="" disabled selected>SELECT CITY</option>
+                                <option value="mumbai">MUMBAI</option>
+                                <option value="delhi">DELHI</option>
+                                <option value="bangalore">BANGALORE</option>
+                                <option value="dubai">DUBAI</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down select-icon"></i>
+                        </div>
+                        <div class="form-group mt-5">
+                            <button type="submit" class="enquiry-submit-btn">SUBMIT</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- Mobile Nav Overlay & Menu -->
     <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
     <nav class="mobile-nav" id="mobileNav">
@@ -88,7 +148,7 @@
             </li>
             <li><a href="ourImpact.html">Our Impact</a></li>
             <li><a href="perspective.html">Perspective</a></li>
-            <li><a href="#">More</a>
+            <li><a href="javascript:void(0)">More</a>
                 <ul class="mobile-submenu list-unstyled ms-3">
                     <li><a href="careers.html" style="font-size: 13px; opacity: 0.8;">Careers</a></li>
                     <li><a href="contactUs.html" style="font-size: 13px; opacity: 0.8;">Contact</a></li>
@@ -99,25 +159,43 @@
 
     <!-- Hero Slider Section -->
     <section class="story-hero">
-        <div class="container story-hero-content">
-            <div class="story-hero-text">
-                <h1 class="story-hero-title">BUILT ON <br>TRUST</h1>
-                <p class="story-hero-desc">Integrity in every home, assurance <br>that lasts beyond possession.</p>
-            </div>
-        </div>
         <div class="story-hero-slider-container">
             <div class="swiper story-hero-swiper">
                 <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
                     <div class="swiper-slide">
                         <img src="assets/images/story/Web-Banner1.png" alt="Buildcon Architecture">
+                        <div class="container story-hero-content">
+                            <div class="story-hero-text">
+                                <h1 class="story-hero-title">LIVING, THOUGHTFULLY CURATED</h1>
+                                <p class="story-hero-desc">Intuitive, elegant spaces crafted for comfort, <br>trust, and lasting belonging.</p>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Slide 2 -->
                     <div class="swiper-slide">
                         <img src="assets/images/story/Web-Banner2.png" alt="Buildcon Interior">
+                        <div class="container story-hero-content">
+                            <div class="story-hero-text">
+                                <h1 class="story-hero-title">BUILT ON TRUST</h1>
+                                <p class="story-hero-desc">Integrity in every home, assurance <br>that lasts beyond possession.</p>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Slide 3 -->
                     <div class="swiper-slide">
                         <img src="assets/images/story/Web-Banner3.png" alt="Buildcon Lifestyle">
+                        <div class="container story-hero-content">
+                            <div class="story-hero-text">
+                                <h1 class="story-hero-title">SPACES THAT FEEL LIKE HOME</h1>
+                                <p class="story-hero-desc">Thoughtfully designed living where comfort, <br>calm, and architecture come together.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- Navigation -->
+                <div class="swiper-button-next story-swiper-next"></div>
+                <div class="swiper-button-prev story-swiper-prev"></div>
             </div>
         </div>
     </section>
@@ -188,7 +266,7 @@
                 <!-- Omar Khan -->
                 <div class="sub-leader-card">
                     <div class="sub-leader-img">
-                        <img src="assets/images/story/omar-khan.png" alt="Omar Khan">
+                        <img src="assets/images/story/Omar-khna-original-image.png" alt="Omar Khan">
                     </div>
                     <h4 class="sub-leader-name">OMAR KHAN</h4>
                     <span class="sub-leader-role">DIRECTOR</span>
@@ -198,7 +276,7 @@
                 <!-- Amit Hindlekar -->
                 <div class="sub-leader-card">
                     <div class="sub-leader-img">
-                        <img src="assets/images/story/amit-hindlekar.png" alt="Amit Hindlekar">
+                        <img src="assets/images/story/Amit.png" alt="Amit Hindlekar">
                     </div>
                     <h4 class="sub-leader-name">AMIT HINDLEKAR</h4>
                     <span class="sub-leader-role">CHIEF EXECUTIVE OFFICER</span>
@@ -257,8 +335,7 @@
                         </p>
                     </div>
                 </div>
-                <div
-                    class="col-lg-4 col-md-12 text-lg-end text-center d-flex justify-content-lg-end justify-content-center">
+                <div class="col-lg-4 col-md-12 text-lg-end text-center d-flex justify-content-lg-end justify-content-center">
                     <div class="ftr_col p-0">
                         <p class="m-0 text-start" style="line-height: 1.8;">IM Buildcon Pvt. Ltd. 809–811, 8th Floor,
                             Corporate Avenue,<br>Sonawala Lane, Goregaon East, Mumbai – 400063</p>
@@ -287,7 +364,7 @@
                 </div>
                 <div class="col-lg-3 col-md-12 mt-4 mt-lg-0 d-flex justify-content-lg-end justify-content-center">
                     <div class="ftr-logo m-0">
-                        <a href="#"><img src="assets/images/logo-new.png" alt="brand-logo" class="img-fluid"
+                        <a href="index.html"><img src="assets/images/logo-new.png" alt="brand-logo" class="img-fluid"
                                 style="max-width: 150px; opacity: 0.9;"></a>
                     </div>
                 </div>
@@ -305,10 +382,14 @@
                 effect: 'fade',
                 loop: true,
                 autoplay: {
-                    delay: 4000,
+                    delay: 5000,
                     disableOnInteraction: false,
                 },
                 speed: 1500,
+                navigation: {
+                    nextEl: '.story-swiper-next',
+                    prevEl: '.story-swiper-prev',
+                },
             });
         });
     </script>

@@ -43,7 +43,8 @@
                     <li><a href="ourImpact.html">Our Impact</a></li>
                     <li><a href="perspective.html" class="active">OUR PERSPECTIVE</a></li>
                     <li class="has-submenu">
-                        <a href="#">More <i class="fa-solid fa-chevron-down ms-1" style="font-size: 10px;"></i></a>
+                        <a href="javascript:void(0)" style="cursor: default;">More <i class="fa-solid fa-chevron-down ms-1"
+                                style="font-size: 10px;"></i></a>
                         <div class="submenu">
                             <ul class="submenu-list">
                                 <li><a href="careers.html">Careers</a></li>
@@ -80,24 +81,25 @@
         <div class="enquiry-overlay-container">
             <div class="container relative">
                 <h3 class="enquiry-title">REQUEST A CALL BACK</h3>
-                <form class="enquiry-form">
+                <form class="enquiry-form" action="smtp/sendemail.php" method="POST">
+                    <input type="hidden" name="form_type" value="enquiry">
                     <div class="row">
                         <!-- Left Column -->
                         <div class="col-md-6 pe-md-5">
                             <div class="form-group">
-                                <input type="text" placeholder="NAME" class="enquiry-input" required>
+                                <input type="text" name="name" placeholder="NAME" class="enquiry-input" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" placeholder="EMAIL ID" class="enquiry-input" required>
+                                <input type="email" name="email" placeholder="EMAIL ID" class="enquiry-input" required>
                             </div>
                             <div class="form-group">
-                                <input type="tel" placeholder="CONTACT NUMBER" class="enquiry-input" required>
+                                <input type="tel" name="phone" placeholder="CONTACT NUMBER" class="enquiry-input" required>
                             </div>
                         </div>
                         <!-- Right Column -->
                         <div class="col-md-6 ps-md-5">
                             <div class="form-group enquiry-select-wrapper">
-                                <select class="enquiry-select" required>
+                                <select name="country" class="enquiry-select" required>
                                     <option value="" disabled selected>SELECT COUNTRY</option>
                                     <option value="india">INDIA</option>
                                     <option value="usa">USA</option>
@@ -107,7 +109,7 @@
                                 <i class="fa-solid fa-chevron-down select-icon"></i>
                             </div>
                             <div class="form-group enquiry-select-wrapper">
-                                <select class="enquiry-select" required>
+                                <select name="city" class="enquiry-select" required>
                                     <option value="" disabled selected>SELECT CITY</option>
                                     <option value="mumbai">MUMBAI</option>
                                     <option value="delhi">DELHI</option>
@@ -359,7 +361,7 @@
                 </div>
                 <div class="col-lg-3 col-md-12 mt-4 mt-lg-0 d-flex justify-content-lg-end justify-content-center">
                     <div class="ftr-logo m-0">
-                        <a href="#"><img src="assets/images/logo-new.png" alt="brand-logo" class="img-fluid"
+                        <a href="index.html"><img src="assets/images/logo-new.png" alt="brand-logo" class="img-fluid"
                                 style="max-width: 150px; opacity: 0.9;"></a>
                     </div>
                 </div>

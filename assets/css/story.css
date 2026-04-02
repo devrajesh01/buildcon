@@ -9,17 +9,19 @@
     width: 100%;
     background-color: var(--clr-dark);
     overflow: hidden;
-    margin-bottom: var(--section-padding); /* 80px gap from the banner to next section */
+
 }
 
 .story-hero-content {
     position: absolute;
     top: 50%;
-    right: 8%; /* Move to right side */
+    right: 8%;
     transform: translateY(-50%);
     z-index: 10;
-    width: auto; /* Shrink-to-fit container */
+    width: auto;
     text-align: right;
+    pointer-events: none;
+    /* Let clicks pass to nav arrows if overlapping */
 }
 
 .story-hero-text {
@@ -27,13 +29,17 @@
 }
 
 .story-hero-title {
-    font-size: 36px;
+    font-size: 24px;
     color: var(--clr-white);
     text-transform: uppercase;
     font-weight: 700;
     line-height: 1.1;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     letter-spacing: 2px;
+    font-style: italic;
+    /* Added italic as requested */
+    white-space: nowrap;
+    /* Prevent line breaks */
 }
 
 .story-hero-desc {
@@ -51,16 +57,7 @@
     z-index: 5;
 }
 
-.story-hero-slider-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
-    z-index: 6;
-}
+/* Removed story-hero-slider-container::after overlay as images already have one */
 
 .story-hero-swiper {
     width: 100%;
@@ -78,10 +75,47 @@
     object-fit: cover;
 }
 
+/* Swiper Navigation Styles */
+.story-swiper-next,
+.story-swiper-prev {
+    color: var(--clr-white) !important;
+    background: rgba(255, 255, 255, 0.1);
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    transition: var(--transition-base);
+    z-index: 100;
+    /* Increased z-index for clickability */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.story-swiper-next::after,
+.story-swiper-prev::after {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+.story-swiper-next:hover,
+.story-swiper-prev:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.story-swiper-next {
+    right: 30px !important;
+}
+
+.story-swiper-prev {
+    left: 30px !important;
+}
+
 /* 2. Story, Vision, Mission Section */
 .story-grid-section {
+    padding-top: var(--section-padding);
+    /* Added top padding for consistent gap */
     padding-bottom: var(--section-padding);
-    background-color: var(--clr-white); /* White background as requested */
+    background-color: var(--clr-white);
 }
 
 .story-grid-container {
@@ -110,28 +144,36 @@
 }
 
 .story-card-title {
-    font-size: 18px;
-    color: var(--clr-dark); /* Dark title */
+    font-size: 16px;
+    /* Reduced from 18px as requested for '2nd section' */
+    color: var(--clr-dark);
+    /* Dark title */
     font-weight: 700;
-    margin-bottom: 15px; /* Adjust spacing as per screenshot */
+    margin-bottom: 15px;
+    /* Adjust spacing as per screenshot */
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .story-card-text {
-    font-size: 13px; /* Smaller text size */
-    color: #333; /* Dark gray for readability on white */
+    font-size: 13px;
+    /* Smaller text size */
+    color: #333;
+    /* Dark gray for readability on white */
     line-height: 1.6;
 }
 
 .vision-mission-col {
     display: flex;
     flex-direction: column;
-    gap: 60px; /* Spacing between Vision and Mission */
+    gap: 60px;
+    /* Spacing between Vision and Mission */
 }
 
 /* 3. Leadership Section */
 .leadership-section {
+    padding-top: var(--section-padding);
+    /* Lead-in gap */
     padding-bottom: var(--section-padding);
     background-color: var(--clr-dark);
 }
@@ -142,7 +184,8 @@
 }
 
 .leadership-header h2 {
-    font-size: 42px;
+    font-size: 32px;
+    /* Reduced from 42px as requested */
     color: var(--clr-white);
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -172,7 +215,8 @@
 }
 
 .leader-name {
-    font-size: 24px;
+    font-size: 20px;
+    /* Reduced from 24px as requested */
     color: var(--clr-white);
     text-transform: uppercase;
     font-weight: 700;
@@ -214,7 +258,7 @@
 
 .sub-leader-img {
     width: 100%;
-    aspect-ratio: 1/1;
+    height: 500px;
     margin-bottom: 20px;
     overflow: hidden;
 }
@@ -231,7 +275,8 @@
 }
 
 .sub-leader-name {
-    font-size: 16px;
+    font-size: 14px;
+    /* Reduced from 16px as requested */
     color: var(--clr-white);
     text-transform: uppercase;
     font-weight: 700;
@@ -261,23 +306,76 @@
 
 /* Responsive */
 @media (max-width: 1200px) {
-    .story-hero-title { font-size: 48px; }
-    .main-leader-container { flex-direction: column; gap: 40px; text-align: center; }
-    .main-leader-img { flex: 0 0 100%; width: 100%; height: auto; max-width: 500px; margin: 0 auto; }
+    .story-hero-title {
+        font-size: 48px;
+    }
+
+    .main-leader-container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .main-leader-img {
+        flex: 0 0 100%;
+        width: 100%;
+        height: auto;
+        max-width: 500px;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 991px) {
-    .story-hero { height: auto; min-height: 100vh; flex-direction: column; padding-top: 120px; }
-    .story-hero-content { padding: 40px; text-align: center; }
-    .story-hero-slider-container { position: relative; width: 90%; height: 400px; transform: none; top: 0; margin: 40px auto; }
-    .story-grid-container { grid-template-columns: 1fr; }
-    .vision-mission-col { gap: 40px; }
-    .leaders-grid { grid-template-columns: repeat(2, 1fr); }
-    .leaders-grid-bottom { flex-direction: column; align-items: center; gap: 40px; }
+    .story-hero {
+        height: auto;
+        min-height: 100vh;
+        flex-direction: column;
+        padding-top: 120px;
+    }
+
+    .story-hero-content {
+        padding: 40px;
+        text-align: center;
+    }
+
+    .story-hero-slider-container {
+        position: relative;
+        width: 90%;
+        height: 400px;
+        transform: none;
+        top: 0;
+        margin: 40px auto;
+    }
+
+    .story-grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .vision-mission-col {
+        gap: 40px;
+    }
+
+    .leaders-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .leaders-grid-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
 }
 
 @media (max-width: 576px) {
-    .story-hero-title { font-size: 32px; }
-    .leaders-grid { grid-template-columns: 1fr; }
-    .main-leader-img { height: 400px; }
+    .story-hero-title {
+        font-size: 32px;
+    }
+
+    .leaders-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-leader-img {
+        height: 400px;
+    }
 }

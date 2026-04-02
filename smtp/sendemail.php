@@ -4,20 +4,14 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-// Allow CORS for AJAX requests
-header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: POST');
-header('Access-Control-Allow-Headers: Content-Type');
+// Load PHPMailer autoloader
+require 'vendor/autoload.php';
 
 // Securely check if the form was submitted via POST
 if ($_SERVER["REQUEST_METHOD"] != "POST") {
-    echo json_encode(['status' => 'error', 'message' => 'Invalid request method.']);
+    header("Location: ../index.html");
     exit();
 }
-
-// Load PHPMailer autoloader
-require 'vendor/autoload.php';
 
 // Identify which form was submitted
 $form_type = isset($_POST['form_type']) ? strip_tags(trim($_POST['form_type'])) : 'unknown';
@@ -34,7 +28,7 @@ if ($form_type === 'enquiry') {
 
     // Validation
     if (empty($name) || empty($email) || empty($phone)) {
-        echo json_encode(['status' => 'error', 'message' => 'Please fill in all required fields.']);
+        header("Location: ../index.html?error=fields");
         exit();
     }
 
@@ -72,7 +66,7 @@ elseif ($form_type === 'careers') {
 
     // Validation
     if (empty($name) || empty($email) || empty($phone)) {
-        echo json_encode(['status' => 'error', 'message' => 'Please fill in all required fields.']);
+        header("Location: ../careers.html?error=fields");
         exit();
     }
 
@@ -117,7 +111,7 @@ elseif ($form_type === 'contact') {
 
     // Validation
     if (empty($name) || empty($email) || empty($phone)) {
-        echo json_encode(['status' => 'error', 'message' => 'Please fill in all required fields.']);
+        header("Location: ../contactUs.html?error=fields");
         exit();
     }
 
@@ -149,7 +143,7 @@ elseif ($form_type === 'contact') {
 // Unknown form
 // ============================================================
 else {
-    echo json_encode(['status' => 'error', 'message' => 'Unknown form type.']);
+    header("Location: ../index.html");
     exit();
 }
 
@@ -193,8 +187,10 @@ try {
 
     $mail->send();
 
-    echo json_encode(['status' => 'success', 'message' => 'Your message has been sent successfully! We will get back to you soon.']);
+    header("Location: ../thank-you.html");
+    exit();
 
 } catch (Exception $e) {
-    echo json_encode(['status' => 'error', 'message' => "Message could not be sent. Error: {$mail->ErrorInfo}"]);
+    echo "Message could not be sent. Error: {$mail->ErrorInfo}";
 }
+?>
