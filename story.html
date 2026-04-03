@@ -246,8 +246,12 @@
                 <div class="main-leader-info">
                     <h3 class="leader-name">EMRRAN KHAN</h3>
                     <span class="leader-role">MANAGING DIRECTOR</span>
-                    <p class="story-card-text" style="margin-bottom: 30px;">Leading with a focus on integrity and long-term value, Mr. Khan has steered IM Buildcon to become a trusted name in Mumbai's real estate, ensuring every project meets the highest standards of quality and care.</p>
-                    <a href="javascript:void(0)" class="leader-know-more">KNOW MORE</a>
+                    <p class="story-card-text" style="margin-bottom: 30px;">A firm believer in building value before volume, Emrran Khan leads IM Buildcon with a focus on integrity, discipline, and purpose, ensuring that every development reflects trust and timeless quality. He always had his mind tilted towards fulfilling the needs of the society who gravitate towards contemporary living and homes that feel like a design from the playbook of a creative storyboard of an exceptional architectural design.</p>
+                    <a href="javascript:void(0)" class="leader-know-more" 
+                        data-name="EMRRAN KHAN" 
+                        data-role="MANAGING DIRECTOR" 
+                        data-img="assets/images/story/emrran-khan.png"
+                        data-bio="A firm believer in building value before volume, Emrran Khan leads IM Buildcon with a focus on integrity, discipline, and purpose, ensuring that every development reflects trust and timeless quality. He always had his mind tilted towards fulfilling the needs of the society who gravitate towards contemporary living and homes that feel like a design from the playbook of a creative storyboard of an exceptional architectural design.">KNOW MORE</a>
                 </div>
             </div>
 
@@ -260,7 +264,11 @@
                     </div>
                     <h4 class="sub-leader-name">HAFSA KHAN</h4>
                     <span class="sub-leader-role">DIRECTOR</span>
-                    <a href="javascript:void(0)" class="leader-know-more">KNOW MORE</a>
+                    <a href="javascript:void(0)" class="leader-know-more"
+                        data-name="HAFSA KHAN"
+                        data-role="DIRECTOR"
+                        data-img="assets/images/story/Hafsa Khan.JPG"
+                        data-bio="With a keen eye for detail and aesthetics, Hafsa Khan contributes to the architectural vision of IM Buildcon, ensuring each project blends modern design with functional elegance and long-lasting quality.">KNOW MORE</a>
                 </div>
 
                 <!-- Omar Khan -->
@@ -270,7 +278,11 @@
                     </div>
                     <h4 class="sub-leader-name">OMAR KHAN</h4>
                     <span class="sub-leader-role">DIRECTOR</span>
-                    <a href="javascript:void(0)" class="leader-know-more">KNOW MORE</a>
+                    <a href="javascript:void(0)" class="leader-know-more"
+                        data-name="OMAR KHAN"
+                        data-role="DIRECTOR"
+                        data-img="assets/images/story/Omar-khna-original-image.png"
+                        data-bio="Omar Khan oversees strategic operations and business development at IM Buildcon. He focuses on sustainable growth and maintaining the firm's reputation for excellence in the competitive Mumbai real estate market through innovation and strategic planning.">KNOW MORE</a>
                 </div>
 
                 <!-- Amit Hindlekar -->
@@ -280,7 +292,11 @@
                     </div>
                     <h4 class="sub-leader-name">AMIT HINDLEKAR</h4>
                     <span class="sub-leader-role">CHIEF EXECUTIVE OFFICER</span>
-                    <a href="javascript:void(0)" class="leader-know-more">KNOW MORE</a>
+                    <a href="javascript:void(0)" class="leader-know-more"
+                        data-name="AMIT HINDLEKAR"
+                        data-role="CHIEF EXECUTIVE OFFICER"
+                        data-img="assets/images/story/Amit.png"
+                        data-bio="As CEO, Amit Hindlekar drives the operational excellence of IM Buildcon. Leveraging over two decades of robust industry experience, he ensures that the firm consistently delivers premium residential and commercial spaces that redefine luxury living.">KNOW MORE</a>
                 </div>
             </div>
 
@@ -288,16 +304,30 @@
             <div class="leaders-grid-bottom">
                 <!-- Priyanka Mayekar -->
                 <div class="sub-leader-card">
+                    <div class="sub-leader-img">
+                        <img src="assets/images/story/placeholder.png" alt="Priyanka Mayekar">
+                    </div>
                     <h4 class="sub-leader-name">PRIYANKA MAYEKAR</h4>
                     <span class="sub-leader-role">GENERAL MANAGER - MARKETING</span>
-                    <a href="javascript:void(0)" class="leader-know-more">KNOW MORE</a>
+                    <a href="javascript:void(0)" class="leader-know-more"
+                        data-name="PRIYANKA MAYEKAR"
+                        data-role="GENERAL MANAGER - MARKETING"
+                        data-img="assets/images/story/placeholder.png"
+                        data-bio="Strategic lead for marketing initiatives, Priyanka Mayekar drives brand positioning and customer engagement strategies, ensuring consistent communication of IM Buildcon's values and unique project selling points.">KNOW MORE</a>
                 </div>
 
                 <!-- Nilesh Raysane -->
                 <div class="sub-leader-card">
+                    <div class="sub-leader-img">
+                        <img src="assets/images/story/placeholder.png" alt="Nilesh Raysane">
+                    </div>
                     <h4 class="sub-leader-name">NILESH RAYSANE</h4>
                     <span class="sub-leader-role">PROJECT MANAGER</span>
-                    <a href="javascript:void(0)" class="leader-know-more">KNOW MORE</a>
+                    <a href="javascript:void(0)" class="leader-know-more"
+                        data-name="NILESH RAYSANE"
+                        data-role="PROJECT MANAGER"
+                        data-img="assets/images/story/placeholder.png"
+                        data-bio="With deep technical expertise, Nilesh Raysane leads project execution from planning to handover, ensuring that timelines, quality standards, and safety benchmarks are met with absolute precision.">KNOW MORE</a>
                 </div>
             </div>
         </div>
@@ -371,6 +401,34 @@
             </div>
         </div>
     </footer>
+
+    <!-- Leadership Bio Modal -->
+    <div class="modal fade leader-bio-modal" id="leaderBioModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close modal-close-btn" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="modal-body p-0">
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <div class="modal-leader-img">
+                                <img src="" alt="" id="modalLeaderImg">
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="modal-leader-info p-4 p-md-5">
+                                <h3 class="modal-leader-name mb-1" id="modalLeaderName"></h3>
+                                <span class="modal-leader-role mb-4 d-block text-uppercase" id="modalLeaderRole"></span>
+                                <hr class="modal-divider mb-4">
+                                <p class="modal-leader-bio" id="modalLeaderBio"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

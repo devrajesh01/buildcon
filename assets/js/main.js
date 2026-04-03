@@ -196,4 +196,20 @@ $(document).ready(function () {
             video.load(); // Reset to poster image
         });
     }
+
+    // Leadership Bio Modal Logic
+    $('.leader-know-more').on('click', function () {
+        const name = $(this).data('name');
+        const role = $(this).data('role');
+        const bio = $(this).data('bio');
+        const img = $(this).data('img');
+
+        $('#modalLeaderName').text(name);
+        $('#modalLeaderRole').text(role);
+        $('#modalLeaderBio').text(bio);
+        $('#modalLeaderImg').attr('src', img).attr('alt', name);
+
+        const leaderModal = new bootstrap.Modal(document.getElementById('leaderBioModal'));
+        leaderModal.show();
+    });
 });

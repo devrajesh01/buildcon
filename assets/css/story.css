@@ -158,7 +158,7 @@
 .story-card-text {
     font-size: 13px;
     /* Smaller text size */
-    color: #333;
+
     /* Dark gray for readability on white */
     line-height: 1.6;
 }
@@ -377,5 +377,81 @@
 
     .main-leader-img {
         height: 400px;
+    }
+}
+
+/* 4. Leadership Bio Modal */
+.leader-bio-modal .modal-content {
+    background-color: var(--clr-dark);
+    border: 1px solid var(--clr-gold-2);
+    border-radius: 0;
+    color: var(--clr-white);
+    overflow: hidden;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1051;
+    background: none;
+    border: none;
+    color: var(--clr-white);
+    font-size: 24px;
+    opacity: 0.8;
+    transition: var(--transition-base);
+    line-height: 1;
+}
+
+.modal-close-btn:hover {
+    opacity: 1;
+    color: var(--clr-gold-2);
+}
+
+.modal-leader-img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+}
+
+.modal-leader-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-leader-name {
+    font-size: 28px;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.modal-leader-role {
+    font-size: 14px;
+    color: var(--clr-gold-2);
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.modal-divider {
+    border-top: 1px solid rgba(184, 151, 91, 0.3);
+    opacity: 1;
+}
+
+.modal-leader-bio {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--clr-white-75);
+}
+
+@media (max-width: 767px) {
+    .modal-leader-img {
+        min-height: 300px;
+    }
+
+    .modal-leader-name {
+        font-size: 22px;
     }
 }
