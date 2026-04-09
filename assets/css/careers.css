@@ -5,7 +5,8 @@
 
 .careers-banner {
     width: 100%;
-    min-height: 400px;
+    height: 95vh;
+    min-height: 95vh;
     overflow: hidden;
     position: relative;
     background-color: #f1f1f1;
@@ -17,9 +18,10 @@
 
 .careers-banner .banner-bg-img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    min-height: 100%;
     object-fit: cover;
-    max-height: 60vh;
+    max-height: none;
 }
 
 .careers-form-card {
@@ -117,11 +119,12 @@
 /* Responsive */
 @media (max-width: 767px) {
     .careers-banner {
-        min-height: 250px;
+        height: 95vh;
+        min-height: 95vh;
     }
 
     .careers-banner .banner-bg-img {
-        min-height: 250px;
+        min-height: 100%;
     }
 
     .careers-form-card {

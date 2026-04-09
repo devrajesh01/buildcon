@@ -5,8 +5,8 @@
 
 .perspective-banner {
     width: 100%;
-    /* You can adjust height here if the image should cover more space */
-    min-height: 400px;
+    height: 95vh;
+    min-height: 95vh;
     overflow: hidden;
     position: relative;
     background-color: #2b222c;
@@ -25,9 +25,10 @@
 
 .perspective-banner .banner-bg-img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    min-height: 100%;
     object-fit: cover;
-    max-height: 80vh;
+    max-height: none;
 }
 
 .section-bg-light {
@@ -72,6 +73,7 @@
     color: #444;
     font-size: 16px;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .social-icons .social-icon:hover {
@@ -167,7 +169,7 @@
 
 @media (max-width: 767.98px) {
     .perspective-banner .banner-bg-img {
-        min-height: 300px;
+        min-height: 100%;
     }
 
     .perspectiveSwiper {

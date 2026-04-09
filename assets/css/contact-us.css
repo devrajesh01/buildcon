@@ -9,8 +9,8 @@
 /* --- Banner Section --- */
 .contact-banner {
     position: relative;
-    height: 60vh;
-    min-height: 400px;
+    height: 95vh;
+    min-height: 95vh;
     width: 100%;
     overflow: hidden;
     display: flex;

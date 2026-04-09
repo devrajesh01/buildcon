@@ -1,20 +1,22 @@
 .main-header {
-    position: relative;
-    /* Separate from banner */
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 15px 0;
+    padding: 0px 0;
     transition: var(--transition-base);
-    background: #000000;
-    /* Solid dark background */
+    background: rgba(0, 0, 0, 0.62);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--clr-white-10);
 }
 
 .main-header.scrolled {
-    background: var(--clr-glass-bg);
+    background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    padding: var(--header-padding-scrolled) 0;
+    /* padding: var(--header-padding-scrolled) 0; */
     box-shadow: none;
     border-bottom: 1px solid var(--clr-white-08);
 }
@@ -112,11 +114,11 @@
 /* Submenu Styles - Professional 'Senior Developer' Refinement */
 .submenu {
     position: absolute;
-    top: 100%;
+    top: calc(100% - 1px);
     left: 0;
     width: max-content;
     min-width: 200px;
-    padding: 25px 0;
+    padding: 10px 0 18px;
     opacity: 0;
     visibility: hidden;
     transition: all 0.25s ease-out;
@@ -130,11 +132,12 @@
     left: -2000px;
     right: -2000px;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    /* More transparent as requested */
+    background: rgba(0, 0, 0, 0.58);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 
     z-index: -1;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: none;
 }
 
 .nav-menu ul li:hover .submenu {

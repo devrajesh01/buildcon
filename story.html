@@ -65,67 +65,67 @@
                 </a>
             </div>
         </div>
+
+        <!-- Search Overlay -->
+        <div class="search-overlay-container">
+            <div class="container relative">
+                <form class="search-form d-flex align-items-center" onsubmit="event.preventDefault();">
+                    <input type="text" placeholder="WHAT ARE YOU LOOKING ?" class="search-input w-100">
+                    <button type="submit" class="search-submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Enquiry Overlay -->
+        <div class="enquiry-overlay-container">
+            <div class="container relative">
+                <h3 class="enquiry-title">REQUEST A CALL BACK</h3>
+                <form class="enquiry-form" action="smtp/sendemail.php" method="POST">
+                    <input type="hidden" name="form_type" value="enquiry">
+                    <div class="row">
+                        <!-- Left Column -->
+                        <div class="col-md-6 pe-md-5">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="NAME" class="enquiry-input" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="EMAIL ID" class="enquiry-input" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="phone" placeholder="CONTACT NUMBER" class="enquiry-input" required>
+                            </div>
+                        </div>
+                        <!-- Right Column -->
+                        <div class="col-md-6 ps-md-5">
+                            <div class="form-group enquiry-select-wrapper">
+                                <select name="country" class="enquiry-select" required>
+                                    <option value="" disabled selected>SELECT COUNTRY</option>
+                                    <option value="india">INDIA</option>
+                                    <option value="usa">USA</option>
+                                    <option value="uk">UK</option>
+                                    <option value="uae">UAE</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down select-icon"></i>
+                            </div>
+                            <div class="form-group enquiry-select-wrapper">
+                                <select name="city" class="enquiry-select" required>
+                                    <option value="" disabled selected>SELECT CITY</option>
+                                    <option value="mumbai">MUMBAI</option>
+                                    <option value="delhi">DELHI</option>
+                                    <option value="bangalore">BANGALORE</option>
+                                    <option value="dubai">DUBAI</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down select-icon"></i>
+                            </div>
+                            <div class="form-group mt-5">
+                                <button type="submit" class="enquiry-submit-btn">SUBMIT</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </header>
-
-    <!-- Search Overlay -->
-    <div class="search-overlay-container">
-        <div class="container relative">
-            <form class="search-form d-flex align-items-center" onsubmit="event.preventDefault();">
-                <input type="text" placeholder="WHAT ARE YOU LOOKING ?" class="search-input w-100">
-                <button type="submit" class="search-submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Enquiry Overlay -->
-    <div class="enquiry-overlay-container">
-        <div class="container relative">
-            <h3 class="enquiry-title">REQUEST A CALL BACK</h3>
-            <form class="enquiry-form" action="smtp/sendemail.php" method="POST">
-                <input type="hidden" name="form_type" value="enquiry">
-                <div class="row">
-                    <!-- Left Column -->
-                    <div class="col-md-6 pe-md-5">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="NAME" class="enquiry-input" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="EMAIL ID" class="enquiry-input" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" name="phone" placeholder="CONTACT NUMBER" class="enquiry-input" required>
-                        </div>
-                    </div>
-                    <!-- Right Column -->
-                    <div class="col-md-6 ps-md-5">
-                        <div class="form-group enquiry-select-wrapper">
-                            <select name="country" class="enquiry-select" required>
-                                <option value="" disabled selected>SELECT COUNTRY</option>
-                                <option value="india">INDIA</option>
-                                <option value="usa">USA</option>
-                                <option value="uk">UK</option>
-                                <option value="uae">UAE</option>
-                            </select>
-                            <i class="fa-solid fa-chevron-down select-icon"></i>
-                        </div>
-                        <div class="form-group enquiry-select-wrapper">
-                            <select name="city" class="enquiry-select" required>
-                                <option value="" disabled selected>SELECT CITY</option>
-                                <option value="mumbai">MUMBAI</option>
-                                <option value="delhi">DELHI</option>
-                                <option value="bangalore">BANGALORE</option>
-                                <option value="dubai">DUBAI</option>
-                            </select>
-                            <i class="fa-solid fa-chevron-down select-icon"></i>
-                        </div>
-                        <div class="form-group mt-5">
-                            <button type="submit" class="enquiry-submit-btn">SUBMIT</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
 
     <!-- Mobile Nav Overlay & Menu -->
     <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
@@ -155,6 +155,28 @@
                 </ul>
             </li>
         </ul>
+        <div class="mobile-nav-actions mt-4">
+            <a href="#" class="mobile-action-item d-flex align-items-center text-decoration-none mb-3">
+                <i class="fa-solid fa-file-signature me-3" style="color: var(--clr-gold);"></i>
+                <span>Enquire</span>
+            </a>
+            <a href="#" class="mobile-action-item d-flex align-items-center text-decoration-none mb-3">
+                <i class="fa-brands fa-whatsapp me-3" style="color: var(--clr-gold);"></i>
+                <span>Chat Now</span>
+            </a>
+            <a href="#" class="mobile-action-item d-flex align-items-center text-decoration-none">
+                <i class="fa-solid fa-magnifying-glass me-3" style="color: var(--clr-gold);"></i>
+                <span>Search</span>
+            </a>
+        </div>
+        <div class="mobile-nav-social">
+            <a target="_blank" href="https://www.facebook.com/IMBuildconOfficial"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+            <a target="_blank" href="https://www.instagram.com/imbuildcon/"><i class="fa-brands fa-instagram"></i></a>
+            <a target="_blank" href="https://x.com/IBuildcon/"><i class="fa-brands fa-twitter"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/company/im-buildcon/"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+        </div>
     </nav>
 
     <!-- Hero Slider Section -->
@@ -247,11 +269,7 @@
                     <h3 class="leader-name">EMRRAN KHAN</h3>
                     <span class="leader-role">MANAGING DIRECTOR</span>
                     <p class="story-card-text" style="margin-bottom: 30px;">A firm believer in building value before volume, Emrran Khan leads IM Buildcon with a focus on integrity, discipline, and purpose, ensuring that every development reflects trust and timeless quality. He always had his mind tilted towards fulfilling the needs of the society who gravitate towards contemporary living and homes that feel like a design from the playbook of a creative storyboard of an exceptional architectural design.</p>
-                    <a href="javascript:void(0)" class="leader-know-more" 
-                        data-name="EMRRAN KHAN" 
-                        data-role="MANAGING DIRECTOR" 
-                        data-img="assets/images/story/emrran-khan.png"
-                        data-bio="A firm believer in building value before volume, Emrran Khan leads IM Buildcon with a focus on integrity, discipline, and purpose, ensuring that every development reflects trust and timeless quality. He always had his mind tilted towards fulfilling the needs of the society who gravitate towards contemporary living and homes that feel like a design from the playbook of a creative storyboard of an exceptional architectural design.">KNOW MORE</a>
+                   
                 </div>
             </div>
 
@@ -298,11 +316,6 @@
                         data-img="assets/images/story/Amit.png"
                         data-bio="As CEO, Amit Hindlekar drives the operational excellence of IM Buildcon. Leveraging over two decades of robust industry experience, he ensures that the firm consistently delivers premium residential and commercial spaces that redefine luxury living.">KNOW MORE</a>
                 </div>
-            </div>
-
-            <!-- Bottom Leaders -->
-            <div class="leaders-grid-bottom">
-                <!-- Priyanka Mayekar -->
                 <div class="sub-leader-card">
                     <div class="sub-leader-img">
                         <img src="assets/images/story/placeholder.png" alt="Priyanka Mayekar">
@@ -329,6 +342,31 @@
                         data-img="assets/images/story/placeholder.png"
                         data-bio="With deep technical expertise, Nilesh Raysane leads project execution from planning to handover, ensuring that timelines, quality standards, and safety benchmarks are met with absolute precision.">KNOW MORE</a>
                 </div>
+            </div>
+
+            <!-- Bottom Leaders -->
+           
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="story-values-section">
+        <div class="container">
+            <div class="story-values-header">
+                <span class="story-values-kicker">OUR VALUES</span>
+                <h2 class="story-values-title">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+            </div>
+
+            <div class="story-values-grid">
+                <div class="story-values-logo">
+                    <img src="assets/images/logo-new.png" alt="IM Buildcon Mark">
+                </div>
+                <p class="story-values-text">We build with people in mind, listening closely, thinking deeply, and delivering beyond the obvious.</p>
+                <p class="story-values-text">We choose the harder path when it leads to better outcomes, knowing that excellence lives in the details.</p>
+                <p class="story-values-text">We grow with those who grow us, valuing trust, talent, and long term partnerships over quick wins.</p>
+                <p class="story-values-text is-accent">We act with clarity and conscience, holding ourselves accountable to what is right, not just what is easy.</p>
+                <p class="story-values-text">We build responsibly, aware that every structure touches lives, communities, and the future we leave behind.</p>
+                <p class="story-values-text">We believe real success is shared, measured in families housed, dreams fulfilled, and communities strengthened.</p>
             </div>
         </div>
     </section>
@@ -454,4 +492,3 @@
 </body>
 
 </html>
-

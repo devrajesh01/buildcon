@@ -12,7 +12,8 @@
     }
 
     .hero-section {
-        height: 60vh;
+        height: 95vh;
+        min-height: 95vh;
     }
 
     .footer .row {
@@ -64,7 +65,8 @@
     }
 
     .hero-section {
-        height: 50vh;
+        height: 95vh;
+        min-height: 95vh;
     }
 
     .footer {
@@ -102,7 +104,8 @@
     }
 
     .hero-section {
-        height: 40vh;
+        height: 95vh;
+        min-height: 95vh;
     }
 
     .mobile-nav {

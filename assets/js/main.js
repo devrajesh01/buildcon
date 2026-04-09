@@ -4,6 +4,23 @@ $(document).ready(function () {
     const $mobileNav = $('#mobileNav');
     const $overlay = $('#mobileNavOverlay');
     const $closeBtn = $('#mobileNavClose');
+    const hasActionText = ($el, text) => $el.text().trim().toLowerCase().includes(text);
+
+    const $searchTriggers = $('.search-btn, .action-item, .mobile-action-item').filter(function () {
+        const $trigger = $(this);
+        return $trigger.hasClass('search-btn') || hasActionText($trigger, 'search');
+    });
+
+    const $enquiryTriggers = $('.enquiry-btn, .action-item, .mobile-action-item').filter(function () {
+        const $trigger = $(this);
+        return $trigger.hasClass('enquiry-btn')
+            || hasActionText($trigger, 'enquire')
+            || hasActionText($trigger, 'enquiry')
+            || hasActionText($trigger, 'inquiry');
+    });
+
+    $searchTriggers.addClass('js-search-trigger');
+    $enquiryTriggers.addClass('js-enquiry-trigger');
 
     // Header scroll effect
     $(window).on('scroll', function () {
@@ -51,7 +68,7 @@ $(document).ready(function () {
     });
 
     // Search Toggle Logic
-    $('.search-btn, .mobile-action-item:contains("Search"), .action-item:contains("Search")').on('click', function (e) {
+    $searchTriggers.on('click', function (e) {
         e.preventDefault();
 
         // Close enquiry if open
@@ -68,7 +85,7 @@ $(document).ready(function () {
     });
 
     // Enquiry Toggle Logic
-    $('.enquiry-btn, .mobile-action-item:contains("Enquire"), .action-item:contains("Enquire")').on('click', function (e) {
+    $enquiryTriggers.on('click', function (e) {
         e.preventDefault();
 
         // Close search if open
@@ -82,16 +99,12 @@ $(document).ready(function () {
     // Close overlays when clicking outside
     $(document).on('click', function (e) {
         if (!$(e.target).closest('.search-overlay-container').length &&
-            !$(e.target).closest('.action-item:contains("Search")').length &&
-            !$(e.target).closest('.mobile-action-item:contains("Search")').length &&
-            !$(e.target).closest('.search-btn').length) {
+            !$(e.target).closest('.js-search-trigger').length) {
             $('.search-overlay-container').removeClass('active');
         }
 
         if (!$(e.target).closest('.enquiry-overlay-container').length &&
-            !$(e.target).closest('.action-item:contains("Enquire")').length &&
-            !$(e.target).closest('.mobile-action-item:contains("Enquire")').length &&
-            !$(e.target).closest('.enquiry-btn').length) {
+            !$(e.target).closest('.js-enquiry-trigger').length) {
             $('.enquiry-overlay-container').removeClass('active');
         }
     });
@@ -178,25 +191,30 @@ $(document).ready(function () {
 
 
 
-    // Testimonial Video Logic
-    const videoWrapper = document.getElementById('testimonialVideoWrapper');
-    const video = document.getElementById('testimonialVideo');
+    document.addEventListener('click', function (e) {
+        const link = e.target.closest('.video-link');
+        if (!link) return;
 
-    if (videoWrapper && video) {
-        videoWrapper.addEventListener('click', function () {
-            if (video.paused) {
-                video.play();
-                video.setAttribute('controls', 'true');
-            }
-        });
+        let videoURL = link.getAttribute('data-video');
 
-        // Reset if video ends
-        video.addEventListener('ended', function () {
-            video.removeAttribute('controls');
-            video.load(); // Reset to poster image
+        // Extract video ID safely
+        let videoID = videoURL.split('v=')[1];
+        if (videoID && videoID.includes('&')) {
+            videoID = videoID.split('&')[0];
+        }
+
+        let embedURL = `https://www.youtube.com/embed/${videoID}?autoplay=1`;
+
+        document.getElementById('youtubeVideo').src = embedURL;
+    });
+
+    // Stop video when modal closes
+    const modal = document.getElementById('videoModal');
+    if (modal) {
+        modal.addEventListener('hidden.bs.modal', function () {
+            document.getElementById('youtubeVideo').src = "";
         });
     }
-
     // Leadership Bio Modal Logic
     $('.leader-know-more').on('click', function () {
         const name = $(this).data('name');
@@ -212,4 +230,107 @@ $(document).ready(function () {
         const leaderModal = new bootstrap.Modal(document.getElementById('leaderBioModal'));
         leaderModal.show();
     });
+
+    // Spacious Slider Functionality
+    const spaciousSlider = {
+        currentSlide: 0,
+        slides: document.querySelectorAll('.spacious-slide'),
+        dots: document.querySelectorAll('.spacious-dot'),
+        totalSlides: 0,
+
+        init() {
+            this.totalSlides = this.slides.length;
+            console.log('Spacious Slider initialized with', this.totalSlides, 'slides');
+            this.setupEventListeners();
+            this.updateSlide(); // Initialize slide display
+        },
+
+        setupEventListeners() {
+            // Next button
+            const nextBtn = document.querySelector('.spacious-next');
+            const prevBtn = document.querySelector('.spacious-prev');
+            
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    console.log('Next button clicked');
+                    this.nextSlide();
+                });
+            }
+
+            // Previous button
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    console.log('Previous button clicked');
+                    this.prevSlide();
+                });
+            }
+
+            // Dots
+            this.dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    console.log('Dot', index, 'clicked');
+                    this.goToSlide(index);
+                });
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    this.prevSlide();
+                } else if (e.key === 'ArrowRight') {
+                    this.nextSlide();
+                }
+            });
+        },
+
+        nextSlide() {
+            this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+            console.log('Moving to slide', this.currentSlide);
+            this.updateSlide();
+        },
+
+        prevSlide() {
+            this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+            console.log('Moving to slide', this.currentSlide);
+            this.updateSlide();
+        },
+
+        goToSlide(index) {
+            this.currentSlide = index;
+            console.log('Going to slide', index);
+            this.updateSlide();
+        },
+
+        updateSlide() {
+            // Calculate prev and next indices
+            const prevIndex = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+            const nextIndex = (this.currentSlide + 1) % this.totalSlides;
+
+            // Update slides
+            this.slides.forEach((slide, index) => {
+                slide.classList.remove('active', 'prev', 'next');
+                
+                if (index === this.currentSlide) {
+                    slide.classList.add('active');
+                } else if (index === prevIndex) {
+                    slide.classList.add('prev');
+                } else if (index === nextIndex) {
+                    slide.classList.add('next');
+                }
+            });
+
+            // Update dots
+            this.dots.forEach((dot, index) => {
+                dot.classList.remove('active');
+                if (index === this.currentSlide) {
+                    dot.classList.add('active');
+                }
+            });
+        }
+    };
+
+    // Initialize slider if slides exist
+    if (document.querySelector('.spacious-slide')) {
+        spaciousSlider.init();
+    }
 });

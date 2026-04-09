@@ -6,15 +6,18 @@
 .projects-banner {
     position: relative;
     width: 100%;
+    height: 95vh;
+    min-height: 95vh;
     overflow: hidden;
 }
 
 .projects-banner .banner-bg-img {
     width: 100%;
+    height: 100%;
+    min-height: 100%;
     display: block;
     object-fit: cover;
-    min-height: 350px;
-    max-height: 650px;
+    max-height: none;
 }
 
 .projects-banner .banner-overlay-text {
@@ -188,10 +191,10 @@
 .spacious-section {
     background: #fff;
     color: #000;
+    padding: 60px 0;
 }
 
-.spacious-main-img,
-.spacious-side-img {
+.spacious-main-img {
     width: 100%;
     height: 400px;
     object-fit: cover;
@@ -199,22 +202,21 @@
     transition: all 0.3s ease;
 }
 
-.spacious-main-img:hover,
-.spacious-side-img:hover {
+.spacious-main-img:hover {
     transform: translateY(-3px);
 }
 
 .spacious-center-wrap {
-    text-align: left;
+    text-align: center;
 }
 
 .spacious-title {
     font-family: var(--ff-heading);
-    font-size: clamp(16px, 1.8vw, 20px);
+    font-size: clamp(18px, 2vw, 24px);
     font-weight: 500;
     line-height: 1.4;
-    margin-bottom: 12px;
-    letter-spacing: 2px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     color: #000;
 }
@@ -227,17 +229,156 @@
     margin-bottom: 0;
 }
 
+/* Slider Styles */
+.spacious-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    min-height: 560px;
+}
+
+.spacious-slide {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    width: 100%;
+    transition: opacity 0.4s ease-in-out;
+    pointer-events: none;
+}
+
+.spacious-slide.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    pointer-events: auto;
+}
+
+.spacious-slide .spacious-main-img {
+    border-radius: 2px;
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.spacious-slide .spacious-center-wrap {
+    width: 100%;
+}
+
+.spacious-slide .spacious-content {
+    max-width: 100%;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.spacious-slider-wrapper {
+    position: relative;
+}
+
+.spacious-slider-wrapper .spacious-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.92);
+    border: 2px solid #d4a574;
+    color: #d4a574;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    font-size: 18px;
+    z-index: 15;
+}
+
+.spacious-slider-wrapper .spacious-nav-btn:hover {
+    background-color: #d4a574;
+    color: #fff;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.spacious-slider-wrapper .spacious-nav-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.slider-arrow-left {
+    left: 0.75rem;
+}
+
+.slider-arrow-right {
+    right: 0.75rem;
+}
+
 @media (max-width: 991px) {
-    .spacious-main-img,
-    .spacious-side-img {
+    .spacious-slider-wrapper {
+        min-height: 450px;
+    }
+
+    .spacious-main-img {
         height: 300px;
+    }
+
+    .spacious-title {
+        font-size: clamp(16px, 1.8vw, 20px);
+    }
+
+    .spacious-slider-wrapper .spacious-nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .slider-arrow-left {
+        left: 0.5rem;
+    }
+
+    .slider-arrow-right {
+        right: 0.5rem;
     }
 }
 
 @media (max-width: 767px) {
-    .spacious-main-img,
-    .spacious-side-img {
+    .spacious-slider-wrapper {
+        min-height: 400px;
+    }
+
+    .spacious-main-img {
         height: 250px;
+    }
+
+    .spacious-title {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .spacious-text {
+        font-size: 13px;
+    }
+
+    .spacious-slider-wrapper .spacious-nav-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .slider-arrow-left {
+        left: 0.3rem;
+    }
+
+    .slider-arrow-right {
+        right: 0.3rem;
     }
 }
 
@@ -263,6 +404,9 @@
 
 .amenity-item {
     margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .amenity-name {
