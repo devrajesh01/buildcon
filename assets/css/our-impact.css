@@ -51,8 +51,12 @@
 
 /* Intro Section */
 .impact-intro {
-    padding: 80px 0;
+    padding: 80px 0 0 0;
     background-color: #fff;
+}
+.impact-feature.bg-light{
+    padding: 0;
+    padding-bottom: 60px;
 }
 
 .impact-intro .section-title {
@@ -125,7 +129,7 @@
 .impact-csr {
     background-color: #000;
     color: #fff;
-    padding: 90px 0 100px;
+    padding: 90px 0 10px;
 }
 
 .impact-csr .csr-img-wrapper {
