@@ -138,6 +138,7 @@ p {
     font-size: var(--fs-body);
     margin-bottom: var(--space-unit);
     line-height: 1.8;
+    letter-spacing: 1.2px;
 }
 
 /* Section Title (Reusable) */
