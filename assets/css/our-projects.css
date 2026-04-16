@@ -189,7 +189,7 @@
    LUXURY SLIDER SECTION
 ================================= */
 .luxury-slider-section {
-    padding: 0 0 80px 0;
+    padding: 0 0 40px 0;
     background-color: var(--clr-white);
     overflow: hidden;
 }
@@ -366,14 +366,14 @@
    AMENITIES SECTION
 ================================= */
 .amenities-section {
-    padding: 80px 0 60px;
+    padding: 40px 0 20px;
     background-color: #fff;
     border-top: 1px solid #eee;
 }
 
 .amenities-heading {
     font-family: var(--ff-heading);
-    font-size: clamp(26px, 3.5vw, 36px);
+    font-size: clamp(26px, 3.5vw, 30px);
     font-weight: 400;
     color: #222;
     text-align: center;
@@ -391,7 +391,7 @@
 
 .amenity-name {
     font-family: var(--ff-heading);
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 500;
     color: #222;
     letter-spacing: 3.5px;
@@ -401,11 +401,11 @@
 
 .amenity-desc {
     font-family: var(--ff-body);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
 
     color: #888;
-    letter-spacing: 1px;
+    letter-spacing: 1.8px;
     margin-bottom: 0;
 }
 
