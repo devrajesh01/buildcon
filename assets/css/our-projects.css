@@ -373,7 +373,7 @@
 
 .amenities-heading {
     font-family: var(--ff-heading);
-    font-size: clamp(26px, 3.5vw, 30px);
+    font-size: clamp(26px, 3.5vw, 28px);
     font-weight: 400;
     color: #222;
     text-align: center;
@@ -391,7 +391,7 @@
 
 .amenity-name {
     font-family: var(--ff-heading);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     color: #222;
     letter-spacing: 3.5px;
@@ -401,7 +401,7 @@
 
 .amenity-desc {
     font-family: var(--ff-body);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
 
     color: #888;
