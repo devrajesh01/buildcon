@@ -1,0 +1,215 @@
+.nri-page {
+    background: #ffffff;
+    color: #1f1f1f;
+}
+
+.content_wrapper {
+    padding-left: 40px;
+}
+
+.nri-hero {
+    background: #111111;
+    height: calc(100vh - 80px);
+    min-height: 460px;
+    max-height: 760px;
+}
+
+.img_box img {
+    width: 100%;
+}
+
+.nri-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.section-padding {
+    padding: 56px 0;
+}
+
+.nri-intro {
+    padding-bottom: 30px;
+}
+
+.nri-intro h1 {
+    font-size: clamp(20px, 2vw, 26px);
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    margin-bottom: 10px;
+}
+
+.nri-intro p {
+    color: #7b7b7b;
+    font-size: 14px;
+
+    margin: 0;
+    max-width: 760px;
+    margin-inline: auto;
+}
+
+.nri-invest h2,
+.nri-market h2 {
+    font-size: clamp(18px, 1.6vw, 24px);
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    margin-bottom: 16px;
+}
+
+.invest-img {
+    border-radius: 2px;
+    width: 100%;
+
+}
+
+.nri-invest ul,
+.nri-market ul,
+.nri-black-strip ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.nri-invest li,
+.nri-market li,
+.nri-black-strip li {
+    color: #6b6b6b;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 2px;
+    letter-spacing: 1.6px;
+    margin-bottom: 10px;
+}
+
+.nri-black-strip {
+    background: #050505;
+    padding: 56px 0;
+}
+
+.nri-black-strip h3 {
+    margin: 0;
+    color: #f8f8f8;
+    font-size: clamp(22px, 2.1vw, 30px);
+    letter-spacing: 3.8px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.why_heading {
+    padding-right: 20px;
+}
+
+.nri-black-strip .strip-list li {
+    color: #d1d1d1;
+}
+
+.insight_heading {
+    margin: 30px 0;
+    letter-spacing: 2px;
+}
+
+.nri-market {
+    padding-bottom: 70px;
+}
+
+.market-content {
+    max-width: 760px;
+}
+
+.nri-market p {
+    color: #696969;
+    line-height: 1.85;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.nri-market ul {
+    display: inline-block;
+    text-align: left;
+    margin-top: 4px;
+}
+
+.connect-link {
+    display: inline-block;
+    margin-top: 26px;
+    color: #b7c593;
+    text-decoration: none;
+    letter-spacing: 1.6px;
+    font-size: 14px;
+}
+
+.connect-link:hover {
+    color: #95aa63;
+}
+
+@media (max-width: 991.98px) {
+    .content_wrapper {
+        padding-left: 0;
+    }
+
+    .section-padding {
+        padding: 42px 0;
+    }
+
+    .nri-invest .row {
+        text-align: center;
+    }
+
+    .nri-invest ul {
+        text-align: left;
+        display: inline-block;
+    }
+
+    .nri-black-strip {
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .nri-black-strip ul {
+        text-align: left;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .nri-hero {
+        height: 40vh !important;
+        min-height: 40vh !important;
+    }
+
+    .nri-invest li,
+    .nri-market li,
+    .nri-black-strip li {
+        margin-bottom: 0;
+    }
+
+    .content_wrapper {}
+}
+
+@media (max-width: 575.98px) {
+    .nri-intro h1 {
+        letter-spacing: 1.2px;
+    }
+
+    .nri-invest h2,
+    .nri-market h2 {
+        font-size: 16px;
+    }
+
+    .nri-invest li,
+    .nri-market li,
+    .nri-black-strip li,
+    .nri-market p,
+    .nri-intro p {
+        font-size: 12px;
+    }
+
+    .nri-black-strip h3 {
+        line-height: 1.35;
+        letter-spacing: 2px;
+    }
+
+    .content_wrapper h2 {
+        margin-top: 20px;
+
+    }
+}

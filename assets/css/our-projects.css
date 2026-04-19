@@ -6,7 +6,7 @@
 .projects-banner {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 80px);
     overflow: hidden;
 }
 
@@ -50,13 +50,18 @@
 }
 
 @media (max-width: 767px) {
+    .projects-banner {
+        height: 40vh !important;
+        min-height: 40vh !important;
+    }
+
     .projects-banner .banner-overlay-text {
         right: auto;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
         width: 90%;
-        background: rgba(255, 255, 255, 0.8);
+        background: rgb(255 255 255 / 37%);
         padding: 20px;
         border-radius: 6px;
     }
@@ -153,6 +158,10 @@
     .about-project .section-heading {
         margin-bottom: 40px;
     }
+
+    .project-card .project-name {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -161,8 +170,8 @@
     }
 
     .about-project .section-heading {
-        font-size: 24px;
-        margin-bottom: 30px;
+        font-size: 20px;
+        margin-bottom: 20px;
     }
 
     .project-card .project-info {
@@ -182,6 +191,10 @@
     .project-card .know-more-link {
         display: block;
         text-align: center;
+    }
+
+    .luxury-slide-content h2 {
+        font-size: 14px;
     }
 }
 
@@ -487,6 +500,10 @@
     .connectivity-list {
         column-count: 2;
     }
+
+    .content_location {
+        padding-right: 0;
+    }
 }
 
 @media (max-width: 767px) {
@@ -509,5 +526,10 @@
 
     .connectivity-list {
         column-count: 1;
+    }
+
+    .realm-item {
+        font-size: 16px;
+        letter-spacing: 1px;
     }
 }

@@ -5,8 +5,8 @@
 /* 1. Hero Section (Right-Side Slider) */
 .story-hero {
     position: relative;
-    height: 95vh;
-    min-height: 95vh;
+    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
     width: 100%;
     background-color: var(--clr-dark);
     overflow: hidden;
@@ -30,7 +30,7 @@
 }
 
 .story-hero-title {
-    font-size: 24px;
+    font-size: 20px;
     color: var(--clr-white);
     text-transform: uppercase;
     font-weight: 700;
@@ -394,14 +394,16 @@
 
 /* Responsive */
 @media (max-width: 1200px) {
-    .story-hero-title {
+    /* .story-hero-title {
         font-size: 48px;
-    }
+    } */
 
     .main-leader-container {
         flex-direction: column;
-        gap: 40px;
+        gap: 30px;
         text-align: center;
+        padding: 0 15px;
+        margin-bottom: 50px;
     }
 
     .main-leader-img {
@@ -439,8 +441,8 @@
 
 @media (max-width: 991px) {
     .story-hero {
-        height: 95vh;
-        min-height: 95vh;
+        height: calc(100vh - 60px);
+        min-height: calc(100vh - 60px);
         padding-top: 0;
     }
 
@@ -449,6 +451,7 @@
         right: 0;
         padding: 0 24px;
         text-align: center;
+        bottom: 10%;
     }
 
     .story-hero-slider-container {
@@ -499,13 +502,16 @@
     }
 
     .story-values-text {
-        font-size: 13px;
+        font-size: 14px;
+        line-height: 1.6;
     }
 }
 
 @media (max-width: 576px) {
     .story-hero-title {
-        font-size: 32px;
+        /* font-size: 28px; */
+        white-space: normal;
+        line-height: 1.2;
     }
 
     .leaders-grid {
@@ -545,9 +551,44 @@
     }
 
     .story-values-text {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1.7;
         text-align: center;
+    }
+
+    .leadership-header {
+        margin-bottom: 20px;
+    }
+
+    .leadership-header h2 {
+        font-size: 22px;
+    }
+
+    .story-card-text {
+        font-size: 14px;
+    }
+
+    .story-swiper-next,
+    .story-swiper-prev {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .story-swiper-next {
+        right: 10px !important;
+    }
+
+    .story-swiper-prev {
+        left: 10px !important;
+    }
+
+    .story-hero-title {
+        font-size: 16px;
+    }
+
+    .story-hero-desc {
+        font-size: 14px !important;
+        line-height: 20px !important;
     }
 }
 

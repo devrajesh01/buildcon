@@ -4,15 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers | IM Buildcon</title>
+    <title>NRI Corner | IM Buildcon</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/careers.css">
+    <link rel="stylesheet" href="assets/css/nri.css">
 </head>
 
 <body>
-    <!-- Header -->
     <header class="main-header">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="header-left d-flex align-items-center">
@@ -39,14 +38,14 @@
                         </div>
                     </li>
                     <li><a href="ourImpact.html">Our Impact</a></li>
-                    <li><a href="perspective.html">OUR PERSPECTIVE</a></li>
+                    <li><a href="perspective.html">Our Perspective</a></li>
                     <li class="has-submenu">
-                        <a href="javascript:void(0)" style="cursor: default;" class="active">More <i class="fa-solid fa-chevron-down ms-1"
-                                style="font-size: 10px;"></i></a>
+                        <a href="javascript:void(0)" style="cursor: default;">More <i
+                                class="fa-solid fa-chevron-down ms-1" style="font-size: 10px;"></i></a>
                         <div class="submenu">
                             <ul class="submenu-list">
-                                <li><a href="nri.html">NRI Corner</a></li>
-                                <li><a href="careers.html" class="active">Careers</a></li>
+                                <li><a href="nri.html" class="active">NRI Corner</a></li>
+                                <li><a href="careers.html">Careers</a></li>
                                 <li><a href="contactUs.html">Contact</a></li>
                             </ul>
                         </div>
@@ -67,24 +66,22 @@
             </div>
         </div>
 
-        <!-- Search Overlay -->
         <div class="search-overlay-container">
             <div class="container relative">
                 <form class="search-form d-flex align-items-center" onsubmit="event.preventDefault();">
                     <input type="text" placeholder="WHAT ARE YOU LOOKING ?" class="search-input w-100">
-                    <button type="submit" class="search-submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button type="submit" class="search-submit" aria-label="Search"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
             </div>
         </div>
 
-        <!-- Enquiry Overlay -->
         <div class="enquiry-overlay-container">
             <div class="container relative">
                 <h3 class="enquiry-title">REQUEST A CALL BACK</h3>
                 <form class="enquiry-form" action="smtp/sendemail.php" method="POST">
                     <input type="hidden" name="form_type" value="enquiry">
                     <div class="row">
-                        <!-- Left Column -->
                         <div class="col-md-6 pe-md-5">
                             <div class="form-group">
                                 <input type="text" name="name" placeholder="NAME" class="enquiry-input" required>
@@ -93,10 +90,10 @@
                                 <input type="email" name="email" placeholder="EMAIL ID" class="enquiry-input" required>
                             </div>
                             <div class="form-group">
-                                <input type="tel" name="phone" placeholder="CONTACT NUMBER" class="enquiry-input" required>
+                                <input type="tel" name="phone" placeholder="CONTACT NUMBER" class="enquiry-input"
+                                    required>
                             </div>
                         </div>
-                        <!-- Right Column -->
                         <div class="col-md-6 ps-md-5">
                             <div class="form-group enquiry-select-wrapper">
                                 <select name="country" class="enquiry-select" required>
@@ -128,7 +125,6 @@
         </div>
     </header>
 
-    <!-- Mobile Nav Overlay -->
     <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
     <nav class="mobile-nav" id="mobileNav">
         <div class="mobile-nav-header">
@@ -149,10 +145,10 @@
             </li>
             <li><a href="ourImpact.html">Our Impact</a></li>
             <li><a href="perspective.html">Perspective</a></li>
-            <li><a href="javascript:void(0)" class="active">More</a>
+            <li><a href="javascript:void(0)">More</a>
                 <ul class="mobile-submenu list-unstyled ms-3">
-                    <li><a href="nri.html" style="font-size: 13px; opacity: 0.8;">NRI Corner</a></li>
-                    <li><a href="careers.html" style="font-size: 13px; opacity: 0.8;" class="active">Careers</a></li>
+                    <li><a href="nri.html" class="active" style="font-size: 13px; opacity: 0.8;">NRI Corner</a></li>
+                    <li><a href="careers.html" style="font-size: 13px; opacity: 0.8;">Careers</a></li>
                     <li><a href="contactUs.html" style="font-size: 13px; opacity: 0.8;">Contact</a></li>
                 </ul>
             </li>
@@ -182,81 +178,84 @@
         </div>
     </nav>
 
-
-    <!-- Main Content -->
-    <main class="careers-main bg-white">
-        <!-- Banner Section -->
-        <section class="careers-banner position-relative">
-            <!-- Using Unsplash placeholder for handshake -->
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=2000"
-                alt="Careers Banner" class="banner-bg-img w-100 object-fit-cover shadow-sm">
+    <main class="nri-page">
+        <section class="nri-hero">
+            <img src="assets/images/nri/nri-banner.png" alt="Mumbai skyline" class="nri-hero-img">
         </section>
 
-        <!-- Intro Section -->
-        <section class="careers-intro py-5 text-center">
-            <div class="container py-lg-4">
-                <h2 class="section-title text-uppercase fw-normal mb-4" style="color: #444; letter-spacing: 2px;">WORK
-                    WITH US</h2>
-                <div class="intro-text mx-auto"
-                    style="max-width: 700px; color: #666; font-size: 15px; font-weight: 300; line-height: 1.8;">
-                    At IMBUILDCON, we believe great spaces are built by great people.<br class="d-none d-md-block">
-                    We offer an environment driven by integrity, collaboration, and long-term vision.<br
-                        class="d-none d-md-block">
-                    If you're passionate about creating quality spaces and growing with purpose,<br
-                        class="d-none d-md-block">
-                    we'd like to hear from you.
-                </div>
+        <section class="nri-intro section-padding text-center">
+            <div class="container">
+                <h1>SEAMLESS PROPERTY INVESTMENT FOR NRIS</h1>
+                <p>Invest with clarity. Own with confidence. Stay connected no matter where you are in the world.</p>
             </div>
         </section>
 
-        <!-- Form Section -->
-        <section class="careers-form-section ">
-            <div class="container pb-lg-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-xl-7">
-                        <div class="careers-form-card">
-                            <form id="careersForm" action="smtp/sendemail.php" method="POST" enctype="multipart/form-data" class="p-4 p-md-5">
-                                <input type="hidden" name="form_type" value="careers">
-                                <div class="form-group mb-4">
-                                    <input type="text" name="name" class="form-control minimal-input" id="fullName"
-                                        placeholder="FULL NAME" required>
-                                </div>
-                                <div class="form-group mb-4">
-                                    <input type="email" name="email" class="form-control minimal-input" id="email"
-                                        placeholder="EMAIL ADDRESS" required>
-                                </div>
-                                <div class="form-group mb-4">
-                                    <input type="tel" name="phone" class="form-control minimal-input" id="phone"
-                                        placeholder="CONTACT NUMBER" required>
-                                </div>
-                                <div class="form-group mb-4">
-                                    <input type="text" name="role" class="form-control minimal-input" id="role"
-                                        placeholder="CURRENT ROLE / EXPERIENCE" required>
-                                </div>
-
-                                <div class="form-group mb-5 file-upload-group position-relative">
-                                    <!-- Custom File Upload UI -->
-                                    <input type="file" name="resume"
-                                        class="form-control file-input position-absolute w-100 h-100 opacity-0"
-                                        id="resume" accept=".pdf,.doc,.docx" required
-                                        style="cursor: pointer; z-index: 2;">
-                                    <div class="minimal-input d-flex align-items-center w-100">
-                                        <span class="file-label">UPLOAD RESUME*</span>
-                                    </div>
-                                </div>
-
-                                <button type="submit"
-                                    class="btn btn-gold-submit text-uppercase rounded-1 w-100 py-3 fw-bold border-0 mt-2">Submit
-                                    Application</button>
-                            </form>
+        <section class="nri-invest section-padding pt-2">
+            <div class="container">
+                <div class="row  justify-content-center align-items-center">
+                    <div class="col-lg-4 col-md-6 img_box">
+                        <img src="assets/images/nri/why-invest.png" alt="NRI investor" class="img-fluid invest-img">
+                    </div>
+                    <div class="col-lg-5 col-md-6 ">
+                        <div class="content_wrapper ">
+                            <h2>WHY INVEST IN INDIA</h2>
+                            <ul>
+                                <li>High ROI in emerging growth hubs like Borivali and Goregaon</li>
+                                <li>Stable appreciation backed by strong urban infrastructure</li>
+                                <li>Consistent rental income potential in metro markets</li>
+                                <li>A future-ready asset for long-term security and retirement planning</li>
+                                <li>A meaningful connection to your roots reimagined through modern living</li>
+                                <li>Invest in momentum. Invest in tomorrow.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-    </main>
+        <section class="nri-black-strip">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div
+                        class="col-md-6 text-end align-items-end d-flex justify-content-md-end justify-content-center h-100">
+                        <div
+                            class="text-md-start why_heading  d-flex justify-content-md-start justify-content-center h-100">
+                            <h3>WHY<br>IM BUILDCON</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="strip-list mb-0">
+                            <li>Trust</li>
+                            <li>Transparency</li>
+                            <li>Dedicated Attention</li>
+                            <li>Global Accessibility</li>
+                            <li>End-to-End Ease</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="nri-market section-padding text-center">
+            <div class="container market-content">
+                <h2>MARKET PERSPECTIVE</h2>
+                <p>India's real estate landscape continues to attract global attention, driven by rapid urbanisation,
+                    infrastructure expansion, and strong demand across key micro-markets.</p>
+                <p>With regulatory support from initiatives like the Reserve Bank of India, NRI investments today are
+                    more structured, secure, and seamless than ever.</p>
+                <h3 class="insight_heading ">Industry insights highlight:</h3>
+                <ul class="industry_points">
+                    <li>Strong growth in suburban and emerging corridors</li>
+                    <li>Increasing rental demand in metro cities</li>
+                    <li>Consistent long-term capital appreciation</li>
+                </ul>
+                <div class="link_wrap">
+                    <a href="contactUs.html" class="connect-link">CONNECT WITH US</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
     <!-- Footer -->
     <footer class="footer pb-5">
         <div class="container">
@@ -292,8 +291,8 @@
                 <div
                     class="col-lg-4 col-md-12 text-lg-end text-center d-flex justify-content-lg-end justify-content-center">
                     <div class="ftr_col p-0">
-                        <p class="m-0 text-start" style="line-height: 1.8;">IM Buildcon Pvt. Ltd. 809–811, 8th Floor,
-                            Corporate Avenue,<br>Sonawala Lane, Goregaon East, Mumbai – 400063</p>
+                        <p class="m-0 text-start" style="line-height: 1.8;">IM Buildcon Pvt. Ltd. 809-811, 8th Floor,
+                            Corporate Avenue,<br>Sonawala Lane, Goregaon East, Mumbai - 400063</p>
                     </div>
                 </div>
             </div>
@@ -309,8 +308,8 @@
                         <li><a href="ourImpact.html">Our Impact</a></li>
                         <li><a href="perspective.html">Perspective</a></li>
                         <li><a href="nri.html">NRI Corner</a></li>
-                                <li><a href="careers.html">Careers</a></li>
-                                <li><a href="contactUs.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contactUs.html">Contact</a></li>
                     </ul>
                     <div class="copyright-text text-lg-start m-0 p-0 text-start pb-2">
                         <span><i class="fa-regular fa-copyright"></i> 2026 All Rights Reserved by IM Buildcon</span>
@@ -327,19 +326,10 @@
             </div>
         </div>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <script>
-        // Update file label text when file is selected
-        document.getElementById('resume').addEventListener('change', function (e) {
-            var fileName = e.target.files[0] ? e.target.files[0].name : "UPLOAD RESUME*";
-            document.querySelector('.file-label').textContent = fileName;
-        });
-    </script>
 </body>
 
 </html>
-
-

@@ -9,8 +9,8 @@
 /* --- Banner Section --- */
 .contact-banner {
     position: relative;
-    height: 95vh;
-    min-height: 95vh;
+    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -192,6 +192,11 @@
 
 /* Responsive */
 @media (max-width: 991px) {
+    .contact-banner {
+        height: 40vh !important;
+        min-height: 40vh !important;
+    }
+
     .contact-banner .line-bold {
         font-size: 28px;
         letter-spacing: 2px;
@@ -202,6 +207,10 @@
     .contact-banner .line-bold {
         font-size: 24px;
         letter-spacing: 1px;
+    }
+
+    .contact-section {
+        padding: 60px 0;
     }
     
     .contact-heading {

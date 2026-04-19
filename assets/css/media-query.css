@@ -1,4 +1,8 @@
 @media (max-width: 991px) {
+    :root {
+        --section-padding: 50px;
+    }
+
     .nav-menu {
         display: none;
     }
@@ -11,9 +15,26 @@
         display: block;
     }
 
-    .hero-section {
-        height: 95vh;
-        min-height: 95vh;
+    .maincontent {
+        padding: 0;
+
+    }
+
+    .pillars-section {
+
+        padding: 40px 0;
+    }
+
+    .hero-section,
+    .story-hero,
+    .impact-banner,
+    .nri-hero,
+    .perspective-banner,
+    .projects-banner,
+    .careers-banner,
+    .contact-banner {
+        height: 40vh !important;
+        min-height: 40vh !important;
     }
 
     .footer .row {
@@ -54,6 +75,21 @@
         padding-right: 0;
         margin-bottom: 30px;
     }
+
+    .hero-nav-prev,
+    .hero-nav-next {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .we-stand-content {
+        padding-left: 20px;
+    }
+
+    .project-card .project-name {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -64,9 +100,24 @@
         --fs-h4: 20px;
     }
 
-    .hero-section {
-        height: 95vh;
-        min-height: 95vh;
+    .section-title {
+        font-size: 26px;
+    }
+
+    .hero-section,
+    .story-hero,
+    .impact-banner,
+    .nri-hero,
+    .perspective-banner,
+    .projects-banner,
+    .careers-banner,
+    .contact-banner {
+        height: 40vh !important;
+        min-height: 40vh !important;
+    }
+
+    .header-actions {
+        display: none;
     }
 
     .footer {
@@ -94,6 +145,53 @@
         border-left: none;
         border-top: 3px solid var(--clr-gold);
     }
+
+    .we-stand-content h4 {
+        font-size: 28px;
+    }
+
+    .we-stand-content p {
+        font-size: 16px;
+    }
+
+    .sec-image {
+        height: 250px;
+    }
+
+    /* .hero-nav-prev,
+    .hero-nav-next {
+        width: 44px;
+        height: 44px;
+        font-size: 14px;
+    } */
+
+    .hero-nav-prev {
+        left: 12px;
+    }
+
+    .hero-nav-next {
+        right: 12px;
+    }
+
+    .amenity-name {
+        font-size: 14px !important;
+    }
+
+    .amenity-desc {
+        font-size: 12px !important;
+    }
+
+    .location-title {
+        font-size: 22px !important;
+    }
+
+    .content_location {
+        padding: 0 15px !important;
+    }
+
+    .location-text {
+        font-size: 14px !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -101,20 +199,32 @@
         --fs-h1: 28px;
         --fs-h2: 24px;
         --fs-h3: 20px;
+        --section-padding: 35px;
     }
 
-    .hero-section {
-        height: 95vh;
-        min-height: 95vh;
+    .hero-section,
+    .story-hero,
+    .impact-banner,
+    .nri-hero,
+    .perspective-banner,
+    .projects-banner,
+    .careers-banner,
+    .contact-banner {
+        height: 30vh !important;
+        min-height: 30vh !important;
     }
 
-    .mobile-nav {
-        width: 100%;
-        right: -100%;
+    .impact-intro .section-title,
+    .section-title {
+        font-size: 24px;
     }
 
     .logo img {
         height: 36px;
+    }
+
+    .video-section {
+        padding: 40px 0;
     }
 
     .main-header.scrolled .logo img {
@@ -129,6 +239,12 @@
 
     .copyright-text {
         font-size: 12px;
+    }
+
+    .footer .ftr_col p span {
+        display: inline-block;
+        max-width: 100%;
+        overflow-wrap: anywhere;
     }
 
     .pillars-slider-wrap {
@@ -150,13 +266,17 @@
     }
 
     .swiper-slide-active {
-        width: 320px;
+        width: 460px;
         /* Centered card focus */
         opacity: 1;
     }
 
+    .pillar-footer p {
+        font-size: 14px;
+    }
+
     .pillar-card {
-        height: 520px;
+        height: 360px;
         padding: 30px 15px;
     }
 
@@ -173,5 +293,34 @@
         justify-content: center;
         padding-top: 20px;
         gap: 20px;
+    }
+
+    .about-section {
+        padding: 70px 0;
+    }
+
+    .about-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .we-stand {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .we-stand-content {
+        order: 2;
+        padding: 40px 20px;
+    }
+
+    .sec-image {
+        order: 1;
+        height: 300px;
+    }
+
+    .sec-image img {
+        height: 100%;
+        object-fit: cover;
     }
 }

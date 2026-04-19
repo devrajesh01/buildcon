@@ -5,8 +5,8 @@
 
 .careers-banner {
     width: 100%;
-    height: 95vh;
-    min-height: 95vh;
+    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
     overflow: hidden;
     position: relative;
     background-color: #f1f1f1;
@@ -119,8 +119,8 @@
 /* Responsive */
 @media (max-width: 767px) {
     .careers-banner {
-        height: 95vh;
-        min-height: 95vh;
+        height: 40vh !important;
+        min-height: 40vh !important;
     }
 
     .careers-banner .banner-bg-img {
@@ -130,9 +130,15 @@
     .careers-form-card {
         border-radius: 30px;
         margin: 0 15px;
+        padding-bottom: 40px;
     }
 
     .btn-gold-submit {
         max-width: 100%;
+    }
+
+    .file-label {
+        white-space: normal;
+        line-height: 1.4;
     }
 }

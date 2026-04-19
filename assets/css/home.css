@@ -1,7 +1,7 @@
 .hero-section {
     position: relative;
-    height: 98vh;
-    min-height: 98vh;
+    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
     width: 100%;
     overflow: hidden;
     isolation: isolate;
@@ -132,12 +132,7 @@
     }
 
     .hero-text-container {
-        right: auto;
-        left: 50%;
-        bottom: 14%;
-        transform: translateX(-50%);
-        width: min(90vw, 520px);
-        text-align: center;
+        display: none;
     }
 }
 
@@ -379,6 +374,10 @@
 
     .we-stand p {
         font-size: 13px;
+        line-height: 1.6;
+    }
+    .we-stand .container {
+        padding: 40px 0;
     }
 }
 
