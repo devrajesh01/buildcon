@@ -611,3 +611,19 @@
 .maincontent {
     padding: 0 150px;
 }
+
+@media (max-width: 1200px) {
+    .maincontent {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .maincontent {
+        padding: 0 20px;
+    }
+    
+    .video-wrapper {
+        border-radius: 20px;
+    }
+}

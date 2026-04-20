@@ -241,11 +241,10 @@
             <div class="luxury-track-wrapper" id="luxuryTrack"></div>
             <div class="luxury-nav">
                 <button class="luxury-arrow" id="luxuryPrev" aria-label="Previous">
-                    <i class="fa-solid fa-arrow-left"></i>
+                    <i class="fa-solid fa-chevron-left"></i>
                 </button>
-                <div class="luxury-dots" id="luxuryDots"></div>
                 <button class="luxury-arrow" id="luxuryNext" aria-label="Next">
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-chevron-right"></i>
                 </button>
             </div>
         </section>
@@ -355,7 +354,7 @@
         <div class="container">
             <!-- Top Section -->
             <div class="row align-items-center ">
-                <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                <div class="col-lg-2 col-md-12 mb-4 mb-lg-0">
                     <div class="socimedia ">
                         <a target="_blank" href="https://www.facebook.com/IMBuildconOfficial"><i
                                 class="fa-brands fa-facebook-f"></i></a>
@@ -375,18 +374,18 @@
                             </a>
                         </p>
                         <p class="m-0">
-                            <a href="tel:+919854236236" class="d-flex align-items-center text-decoration-none">
+                            <a href="tel:+919854236236" target="_blank"
+                                class="d-flex align-items-center text-decoration-none">
                                 <i class="fa-solid fa-phone"></i>
                                 <span>+91 9854 236 236</span>
                             </a>
                         </p>
                     </div>
                 </div>
-                <div
-                    class="col-lg-4 col-md-12 text-lg-end text-center d-flex justify-content-lg-end justify-content-center">
+                <div class="col-lg-5 col-md-12 text-left d-flex justify-content-center">
                     <div class="ftr_col p-0">
-                        <p class="m-0 text-start" style="line-height: 1.8;">IM Buildcon Pvt. Ltd. 809–811, 8th Floor,
-                            Corporate Avenue,<br>Sonawala Lane, Goregaon East, Mumbai – 400063</p>
+                        <p class="m-0" style="line-height: 1.8;">IM Buildcon Pvt. Ltd. 809-811, 8th Floor,
+                            Corporate Avenue,<br>Sonawala Lane, Goregaon East, Mumbai - 400063</p>
                     </div>
                 </div>
             </div>
@@ -401,8 +400,8 @@
                         <li><a href="ourImpact.html">Our Impact</a></li>
                         <li><a href="perspective.html">Perspective</a></li>
                         <li><a href="nri.html">NRI Corner</a></li>
-                                <li><a href="careers.html">Careers</a></li>
-                                <li><a href="contactUs.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contactUs.html">Contact</a></li>
                     </ul>
                     <div class="copyright-text text-lg-start m-0 p-0 text-start pb-2">
                         <span><i class="fa-regular fa-copyright"></i> 2026 All Rights Reserved by IM Buildcon</span>
@@ -436,7 +435,7 @@
                 desc: "Applaud is not about excess. It is about intention. Homes designed and built with discernment. Features that define a lifestyle lived between the personal, calm, and conscious."
             },
             {
-                img: "assets/images/projects/spacius-right-image.png",
+                img: "assets/images/projects/spacius-right-image.jpg",
                 title: "WHERE CALM LIVING\nMEETS THE CITY",
                 desc: "From open interiors to thoughtfully planned common spaces. Features that balance the desire of your city living with the calm you need from a residential sanctuary."
             }
@@ -444,7 +443,19 @@
 
         let luxuryCurrent = 0;
         const luxuryTrack = document.getElementById('luxuryTrack');
-        const luxuryDotsEl = document.getElementById('luxuryDots');
+        let autoSlideInterval;
+
+        function startAutoSlide() {
+            stopAutoSlide();
+            autoSlideInterval = setInterval(() => {
+                luxuryCurrent = (luxuryCurrent + 1) % luxurySlides.length;
+                renderLuxurySlider();
+            }, 5000); // Change slide every 5 seconds
+        }
+
+        function stopAutoSlide() {
+            if (autoSlideInterval) clearInterval(autoSlideInterval);
+        }
 
         function renderLuxurySlider() {
             const n = luxurySlides.length;
@@ -467,34 +478,23 @@
                     </div>`;
                 luxuryTrack.appendChild(div);
             });
-
-            // Update dots
-            luxuryDotsEl.querySelectorAll('.luxury-dot').forEach((d, i) =>
-                d.classList.toggle('active', i === luxuryCurrent)
-            );
         }
-
-        // Initialize dots
-        luxurySlides.forEach((_, i) => {
-            const dot = document.createElement('div');
-            dot.className = 'luxury-dot' + (i === 0 ? ' active' : '');
-            dot.onclick = () => { luxuryCurrent = i; renderLuxurySlider(); };
-            luxuryDotsEl.appendChild(dot);
-        });
 
         document.getElementById('luxuryPrev').onclick = () => {
             luxuryCurrent = (luxuryCurrent - 1 + luxurySlides.length) % luxurySlides.length;
             renderLuxurySlider();
+            startAutoSlide(); // Reset timer on interaction
         };
         document.getElementById('luxuryNext').onclick = () => {
             luxuryCurrent = (luxuryCurrent + 1) % luxurySlides.length;
             renderLuxurySlider();
+            startAutoSlide(); // Reset timer on interaction
         };
 
         renderLuxurySlider();
+        startAutoSlide();
     </script>
     <script src="assets/js/main.js"></script>
 </body>
 
 </html>
-

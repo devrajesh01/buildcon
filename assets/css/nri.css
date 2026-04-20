@@ -142,6 +142,13 @@
     color: #95aa63;
 }
 
+@media (min-width: 1024px) and (max-width: 1400px) {
+    .img_box img {
+        height: 350px;
+        object-fit: cover;
+    }
+}
+
 @media (max-width: 991.98px) {
     .content_wrapper {
         padding-left: 0;

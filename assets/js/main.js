@@ -71,6 +71,11 @@ $(document).ready(function () {
     $searchTriggers.on('click', function (e) {
         e.preventDefault();
 
+        // Close mobile nav if open
+        if ($mobileNav.hasClass('active')) {
+            closeMobileNav();
+        }
+
         // Close enquiry if open
         if ($('.enquiry-overlay-container').hasClass('active')) {
             $('.enquiry-overlay-container').removeClass('active');
@@ -87,6 +92,11 @@ $(document).ready(function () {
     // Enquiry Toggle Logic
     $enquiryTriggers.on('click', function (e) {
         e.preventDefault();
+
+        // Close mobile nav if open
+        if ($mobileNav.hasClass('active')) {
+            closeMobileNav();
+        }
 
         // Close search if open
         if ($('.search-overlay-container').hasClass('active')) {
@@ -107,6 +117,13 @@ $(document).ready(function () {
             !$(e.target).closest('.js-enquiry-trigger').length) {
             $('.enquiry-overlay-container').removeClass('active');
         }
+    });
+
+    // Close mobile nav when clicking Chat Now (to ensure it doesn't stay open in background)
+    $('.mobile-action-item').filter(function() {
+        return hasActionText($(this), 'chat');
+    }).on('click', function() {
+        closeMobileNav();
     });
 
     // Initialize Pillars Swiper
@@ -332,5 +349,26 @@ $(document).ready(function () {
     // Initialize slider if slides exist
     if (document.querySelector('.spacious-slide')) {
         spaciousSlider.init();
+    }
+
+    // Testimonial Video Logic
+    const $videoWrapper = $('#testimonialVideoWrapper');
+    const $video = $('#testimonialVideo');
+
+    if ($videoWrapper.length && $video.length) {
+        $videoWrapper.on('click', function () {
+            const videoElement = $video[0];
+            if (videoElement.paused) {
+                videoElement.play();
+                $video.attr('controls', true);
+            } else {
+                videoElement.pause();
+            }
+        });
+
+        // Ensure controls are visible when playing starts
+        $video.on('play', function() {
+            $video.attr('controls', true);
+        });
     }
 });

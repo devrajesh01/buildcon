@@ -162,6 +162,10 @@
 
 }
 
+.main-leader-info .story-card-text {
+    margin-bottom: 15px !important;
+}
+
 .story-card-text {
     font-size: 13px;
     /* Smaller text size */
@@ -216,7 +220,7 @@
 .main-leader-container .story-card-text {
     line-height: 26px;
     font-size: 15px;
-    margin-bottom: 0 !important;
+
 }
 
 .main-leader-img {

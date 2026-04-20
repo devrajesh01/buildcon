@@ -6,9 +6,9 @@
     z-index: 1000;
     padding: 0px 0;
     transition: var(--transition-base);
-    background: rgba(0, 0, 0, 0.62);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.77);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     border-bottom: 1px solid var(--clr-white-10);
 }
 
@@ -420,7 +420,7 @@
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 999;
+    z-index: 2100;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -504,7 +504,7 @@
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 999;
+    z-index: 2100;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding-right: 270px;
     padding-left: 270px;
