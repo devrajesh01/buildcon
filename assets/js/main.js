@@ -120,9 +120,9 @@ $(document).ready(function () {
     });
 
     // Close mobile nav when clicking Chat Now (to ensure it doesn't stay open in background)
-    $('.mobile-action-item').filter(function() {
+    $('.mobile-action-item').filter(function () {
         return hasActionText($(this), 'chat');
-    }).on('click', function() {
+    }).on('click', function () {
         closeMobileNav();
     });
 
@@ -241,11 +241,52 @@ $(document).ready(function () {
 
         $('#modalLeaderName').text(name);
         $('#modalLeaderRole').text(role);
-        $('#modalLeaderBio').text(bio);
+
+        // Handle Read More for Modal Bio
+        const $bioContainer = $('#modalLeaderBio');
+        $bioContainer.attr('data-full-bio', bio); // Store full bio
+
+        const words = bio.trim().split(/\s+/);
+        if (words.length > 55) {
+            const truncatedText = words.slice(0, 70).join(' ') + '... ';
+            $bioContainer.html(truncatedText + '<span class="read-more-toggle" data-action="expand">Read More</span>');
+        } else {
+            $bioContainer.text(bio);
+        }
+
         $('#modalLeaderImg').attr('src', img).attr('alt', name);
 
         const leaderModal = new bootstrap.Modal(document.getElementById('leaderBioModal'));
         leaderModal.show();
+    });
+
+    // Toggle Read More/Less Global Handler
+    $(document).on('click', '.read-more-toggle', function () {
+        const $btn = $(this);
+        const $container = $btn.parent();
+        const action = $btn.data('action');
+        const fullText = $container.attr('data-full-bio');
+
+        if (action === 'expand') {
+            $container.html(fullText + ' <span class="read-more-toggle" data-action="collapse">Read Less</span>');
+        } else {
+            const words = fullText.trim().split(/\s+/);
+            const truncatedText = words.slice(0, 55).join(' ') + '... ';
+            $container.html(truncatedText + '<span class="read-more-toggle" data-action="expand">Read More</span>');
+        }
+    });
+
+    // Auto-initialize Read More for elements with .js-read-more
+    $('.js-read-more').each(function () {
+        const $el = $(this);
+        const text = $el.text().trim();
+        const words = text.split(/\s+/);
+
+        if (words.length > 55) {
+            $el.attr('data-full-bio', text);
+            const truncatedText = words.slice(0, 55).join(' ') + '... ';
+            $el.html(truncatedText + '<span class="read-more-toggle" data-action="expand">Read More</span>');
+        }
     });
 
     // Spacious Slider Functionality
@@ -266,7 +307,7 @@ $(document).ready(function () {
             // Next button
             const nextBtn = document.querySelector('.spacious-next');
             const prevBtn = document.querySelector('.spacious-prev');
-            
+
             if (nextBtn) {
                 nextBtn.addEventListener('click', () => {
                     console.log('Next button clicked');
@@ -326,7 +367,7 @@ $(document).ready(function () {
             // Update slides
             this.slides.forEach((slide, index) => {
                 slide.classList.remove('active', 'prev', 'next');
-                
+
                 if (index === this.currentSlide) {
                     slide.classList.add('active');
                 } else if (index === prevIndex) {
@@ -367,7 +408,7 @@ $(document).ready(function () {
         });
 
         // Ensure controls are visible when playing starts
-        $video.on('play', function() {
+        $video.on('play', function () {
             $video.attr('controls', true);
         });
     }

@@ -594,6 +594,11 @@
         font-size: 14px !important;
         line-height: 20px !important;
     }
+
+    .sub-leader-img,
+    .modal-leader-img {
+        height: 423px !important;
+    }
 }
 
 /* 5. Leadership Bio Modal */
@@ -660,6 +665,24 @@
     font-size: 14px;
     line-height: 1.8;
     color: var(--clr-white-75);
+    white-space: pre-wrap;
+}
+
+.read-more-toggle {
+    color: var(--clr-gold-2);
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    display: inline-block;
+    transition: var(--transition-base);
+}
+
+.read-more-toggle:hover {
+    color: var(--clr-white);
+    text-decoration: underline;
 }
 
 @media (max-width: 767px) {

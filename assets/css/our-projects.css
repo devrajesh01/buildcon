@@ -137,12 +137,12 @@
     font-family: var(--ff-heading);
     font-size: 14px;
     font-weight: 600;
-    /* color: var(--clr-gold); */
+    color: var(--clr-gold);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: var(--transition-base);
-    color: #95c12b;
+
 }
 
 .project-card .know-more-link:hover {
@@ -379,7 +379,7 @@
     .luxury-img-box {
         height: 250px;
     }
-    
+
     .video-wrapper {
         border-radius: 20px;
     }
