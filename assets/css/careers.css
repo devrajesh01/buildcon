@@ -24,6 +24,10 @@
     max-height: none;
 }
 
+.careers-banner .banner-mobile {
+    display: none;
+}
+
 .careers-form-card {
     padding-bottom: 70px;
 }
@@ -118,6 +122,14 @@
 
 /* Responsive */
 @media (max-width: 767px) {
+    .careers-banner .banner-desktop {
+        display: none;
+    }
+
+    .careers-banner .banner-mobile {
+        display: block;
+    }
+
     .careers-banner {
         height: 40vh !important;
         min-height: 40vh !important;
@@ -141,4 +153,11 @@
         white-space: normal;
         line-height: 1.4;
     }
+}
+@media (max-width: 530px) {
+
+.careers-banner{
+    height: 60vh !important;
+    min-height: 60vh !important;
+}
 }

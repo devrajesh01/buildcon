@@ -49,8 +49,17 @@ $(document).ready(function () {
     $overlay.on('click', closeMobileNav);
 
     // Close on link click
-    $('.mobile-nav-links a').on('click', function () {
-        closeMobileNav();
+    $('.mobile-nav-links a').on('click', function (e) {
+        const $link = $(this);
+        const $submenu = $link.siblings('.mobile-submenu');
+
+        if ($submenu.length > 0) {
+            e.preventDefault();
+            $submenu.toggleClass('show');
+            $link.toggleClass('open');
+        } else {
+            closeMobileNav();
+        }
     });
 
     // Close on ESC key
@@ -410,6 +419,63 @@ $(document).ready(function () {
         // Ensure controls are visible when playing starts
         $video.on('play', function () {
             $video.attr('controls', true);
+        });
+    }
+
+    // AJAX Search Logic
+    const searchData = [
+        { title: "Home", url: "index.php" },
+        { title: "Our Story", url: "story.php" },
+        { title: "Applaud 38 - Goregaon", url: "applaud-38.php" },
+        { title: "The Crimson - Borivali", url: "the-crimson.php" },
+        { title: "Our Impact", url: "ourImpact.php" },
+        { title: "Our Perspective", url: "perspective.php" },
+        { title: "NRI Corner", url: "nri.php" },
+        { title: "Blogs", url: "https://imbuildcon.in/blogs/" },
+        { title: "Careers", url: "careers.php" },
+        { title: "Contact Us", url: "contactUs.php" }
+    ];
+
+    const $searchInput = $('#ajaxSearchInput');
+    const $searchResults = $('#ajaxSearchResults');
+
+    if ($searchInput.length > 0) {
+        $searchInput.on('input', function() {
+            const query = $(this).val().toLowerCase().trim();
+            $searchResults.empty();
+
+            if (query.length > 0) {
+                const filteredResults = searchData.filter(item => 
+                    item.title.toLowerCase().includes(query)
+                );
+
+                if (filteredResults.length > 0) {
+                    filteredResults.forEach(item => {
+                        $searchResults.append(`
+                            <a href="${item.url}" class="search-result-item">
+                                <div class="search-result-title">${item.title}</div>
+                            </a>
+                        `);
+                    });
+                } else {
+                    $searchResults.append('<div class="search-no-results">No results found</div>');
+                }
+                $searchResults.addClass('active');
+            } else {
+                $searchResults.removeClass('active');
+            }
+        });
+
+        // Prevent form submission
+        $('#ajaxSearchForm').on('submit', function(e) {
+            e.preventDefault();
+        });
+
+        // Hide results when clicking outside
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('#ajaxSearchForm').length) {
+                $searchResults.removeClass('active');
+            }
         });
     }
 });

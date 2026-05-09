@@ -39,6 +39,10 @@
     z-index: 0;
 }
 
+.contact-banner .banner-mobile {
+    display: none;
+}
+
 .contact-banner .banner-overlay-text {
     position: relative;
     z-index: 2;
@@ -204,6 +208,14 @@
 }
 
 @media (max-width: 767px) {
+    .contact-banner .banner-desktop {
+        display: none;
+    }
+
+    .contact-banner .banner-mobile {
+        display: block;
+    }
+
     .contact-banner .line-bold {
         font-size: 24px;
         letter-spacing: 1px;
@@ -219,5 +231,18 @@
     
     .submit-btn {
         width: 100%;
+    }
+}
+@media (max-width: 530px) {
+
+.contact-banner::after{
+    background: unset !important;
+}
+    .contact-banner .line-bold{
+        max-width: 200px;
+    }
+    .contact-banner{
+        height: 60vh !important;
+        min-height: 60vh !important;
     }
 }

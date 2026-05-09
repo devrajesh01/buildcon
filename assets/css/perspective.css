@@ -31,6 +31,10 @@
     max-height: none;
 }
 
+.perspective-banner .banner-bg-mobile {
+    display: none;
+}
+
 .section-bg-light {
     background-color: #ffffff;
 }
@@ -173,6 +177,18 @@
 }
 
 @media (max-width: 767.98px) {
+    .perspective-banner .banner-bg-desktop {
+        display: none;
+    }
+
+    .perspective-banner .banner-bg-mobile {
+        display: block;
+    }
+
+    .perspective-banner .banner-logo-overlay {
+        display: none;
+    }
+
     .perspective-banner .banner-bg-img {
         min-height: 100%;
     }
@@ -203,6 +219,20 @@
         /* bottom: 0 !important; */
         top: 94%;
     }
+}
+@media (max-width: 508px) {
+   .perspective-video{
+        padding-bottom: 54px;
+
+    }
+    .perspective-intro{
+        padding-bottom: 30px !important;
+    }
+    .perspective-banner{
+        height: 80vh!important;
+        min-height: 80vh !important;
+    }
+    
 }
 
 @media (min-width: 768px) {

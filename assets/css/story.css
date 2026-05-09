@@ -47,7 +47,7 @@
     font-size: 14px;
     color: var(--clr-white-75);
     line-height: 1.6;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 .story-hero-slider-container {
@@ -75,6 +75,20 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.story-hero-banner.mobile-banner {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .story-hero-banner.desktop-banner {
+        display: none;
+    }
+
+    .story-hero-banner.mobile-banner {
+        display: block;
+    }
 }
 
 /* Swiper Navigation Styles */
@@ -599,6 +613,17 @@
     .modal-leader-img {
         height: 423px !important;
     }
+    .story-hero{
+        height: 60vh !important;
+        min-height: 60vh !important;
+    }
+    .story-swiper-next, .story-swiper-prev{
+        top:70%;
+    }
+    .story-hero-content{
+        bottom: 60%;
+    }
+
 }
 
 /* 5. Leadership Bio Modal */

@@ -324,3 +324,9 @@
         object-fit: cover;
     }
 }
+@media (max-width:534px) {
+.hero-section{
+    height: 80vh !important;
+    min-height: 80vh !important
+}
+}

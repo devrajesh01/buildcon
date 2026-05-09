@@ -28,6 +28,7 @@
     z-index: 1;
 }
 
+
 /* Updated overlay for video contrast */
 /* .hero-swiper .swiper-slide::after {
     content: '';
@@ -626,4 +627,11 @@
     .video-wrapper {
         border-radius: 20px;
     }
+}
+
+@media (max-width:534px) {
+.hero-section{
+    height: 80vh !important;
+    min-height: 80vh !important
+}
 }

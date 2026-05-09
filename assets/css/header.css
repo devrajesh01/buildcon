@@ -6,7 +6,7 @@
     z-index: 1000;
     padding: 0px 0;
     transition: var(--transition-base);
-    background: rgba(0, 0, 0, 0.77);
+    background: rgba(0, 0, 0, 0.62);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
     border-bottom: 1px solid var(--clr-white-10);
@@ -123,7 +123,7 @@
 /* Submenu Styles - Professional 'Senior Developer' Refinement */
 .submenu {
     position: absolute;
-    top: calc(100% - 1px);
+    top: calc(100% - -4px);
     left: 0;
     width: max-content;
     min-width: 200px;
@@ -339,7 +339,15 @@
 
 .mobile-nav-links li a:hover {
     color: var(--clr-gold);
-    padding-left: 10px;
+
+}
+
+.mobile-nav-links li a i {
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav-links li a.open i {
+    transform: rotate(180deg);
 }
 
 /* Mobile Submenu */
@@ -347,6 +355,13 @@
     padding-left: 20px;
     margin-top: -5px;
     margin-bottom: 10px;
+    display: none;
+    /* Hide by default */
+}
+
+.mobile-submenu.show {
+    display: block;
+    /* Show when toggled */
 }
 
 .mobile-submenu li {
@@ -382,7 +397,8 @@
 .mobile-nav-social {
     display: flex;
     gap: 10px;
-    margin-top: auto;
+    margin-top: 30px;
+    /* Reduced from auto to stay near action buttons */
     padding-top: 20px;
     border-top: 1px solid var(--clr-white-10);
 }
@@ -667,4 +683,58 @@
         right: -100%;
         padding: 20px;
     }
+}
+
+/* =================================
+   AJAX SEARCH RESULTS
+   ================================= */
+.search-results-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: none;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 2200;
+    display: none; /* Hidden by default */
+}
+
+.search-results-dropdown.active {
+    display: block;
+}
+
+.search-result-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: block;
+    color: var(--clr-white);
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--clr-gold);
+}
+
+.search-result-title {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.search-no-results {
+    padding: 15px 20px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    text-align: center;
 }

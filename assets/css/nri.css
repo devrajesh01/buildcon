@@ -25,6 +25,10 @@
     display: block;
 }
 
+.nri-hero .banner-mobile {
+    display: none;
+}
+
 .section-padding {
     padding: 56px 0;
 }
@@ -193,6 +197,14 @@
 }
 
 @media (max-width: 575.98px) {
+    .nri-hero .banner-desktop {
+        display: none;
+    }
+
+    .nri-hero .banner-mobile {
+        display: block;
+    }
+
     .nri-intro h1 {
         letter-spacing: 1.2px;
     }
@@ -218,5 +230,14 @@
     .content_wrapper h2 {
         margin-top: 20px;
 
+    }
+
+    .nri-black-strip ul {
+
+        margin-left: -40px;
+    }
+    .nri-hero{
+        height: 60vh !important;
+        min-height: 60vh !important;
     }
 }

@@ -19,6 +19,10 @@
     max-height: none;
 }
 
+.projects-banner .banner-mobile {
+    display: none;
+}
+
 .projects-banner .banner-overlay-text {
     position: absolute;
     top: 50%;
@@ -50,6 +54,14 @@
 }
 
 @media (max-width: 767px) {
+    .projects-banner .banner-desktop {
+        display: none;
+    }
+
+    .projects-banner .banner-mobile {
+        display: block;
+    }
+
     .projects-banner {
         height: 40vh !important;
         min-height: 40vh !important;
@@ -543,4 +555,11 @@
         font-size: 16px;
         letter-spacing: 1px;
     }
+}
+@media (max-width:500px) {
+
+.projects-banner{
+    height: 77vh !important;
+    min-height: 77vh !important;
+}
 }

@@ -22,6 +22,10 @@
     display: block;
 }
 
+.impact-banner .banner-mobile {
+    display: none;
+}
+
 .impact-banner .banner-text {
     position: absolute;
     top: 50%;
@@ -166,6 +170,14 @@
 }
 
 @media (max-width: 767px) {
+    .impact-banner .banner-desktop {
+        display: none;
+    }
+
+    .impact-banner .banner-mobile {
+        display: block;
+    }
+
     .impact-intro {
         padding-top: 56px;
     }
@@ -190,6 +202,13 @@
     .impact-intro .section-title {
         font-size: 26px !important;
     }
+}
+
+@media (max-width: 534px) {
+.impact-banner{
+    height: 70vh !important;
+    min-height: 70vh !important;
+}
 }
 
 @media (min-width: 992px) {
